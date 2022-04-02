@@ -1,0 +1,163 @@
+
+.login .title{
+	color: rgb(67,117,123);
+	font-weight: 600;
+	font-size: 0.32rem;
+	margin: 0.4rem 0 0.24rem;
+}
+.login .content{
+	color: #000;
+	width: 50%;
+	font-size: 0.15rem;
+	line-height: 0.2rem;
+	margin-bottom: 0.7rem;
+}
+.login .secction{
+	color: rgb(67,117,123);
+	padding: 0.7rem 0.6rem;
+	align-items: flex-start;
+}
+.login .left{
+	flex: 1;
+	margin: 0 0.4rem;
+}
+.login .name{
+	font-size: 0.36rem;
+	font-weight: 600;
+}
+.login .cont{
+	font-weight: 600;
+	font-size: 0.2rem;
+	margin: 0.08rem 0 0.2rem 0;
+}
+.login .uil{
+	color: #000;
+	font-size: 0.14rem;
+}
+.login .uil input{
+	background-color: rgb(232,244,244);
+	flex: 1;
+}
+.login .lis{
+	border-bottom: 1px solid #000;
+	flex: 1;
+	padding-bottom: 0.1rem;
+	margin-top: 0.14rem;
+}
+.login .right{
+	margin-left: 0.1rem;
+}
+.login .loginBtn{
+	color: #fff;
+	background-color: rgb(67,117,123);
+	text-align: center;
+	font-size: 0.15rem;
+	margin: 0.3rem 0 0.16rem 0;
+	padding: 0.12rem 0;
+	border-radius: 0.13rem;
+    cursor: pointer;
+    margin-bottom: 0.1rem;
+}
+.login .botm{
+	font-size: 0.14rem;
+	color: #000;
+}
+.login .here{
+	color: rgb(67,117,123);
+	margin-left: 0.06rem;
+	cursor: pointer;
+}
+.login .tips {
+	/* position: absolute; */
+	/* right: -2.5rem;
+	top: 0.7rem; */
+	color: #333;
+	/* width: 2.5rem; */
+	/* transform: translate(-50%, 0); */
+	text-align: center;
+	margin-top: -0.1rem;
+	padding-bottom: 0.5rem;
+}
+.login .padLR {
+    padding: 0 0.5rem;
+}
+.login .sec2 {
+    background-color: rgb(232,244,244);position: relative;
+}
+.login .sec2>.secction {
+    position: relative;
+}
+@media screen and (max-width:1155px){
+	.login .secction{
+		padding: 0.7rem 0;
+	}
+	.login .left{
+		margin: 0 0.2rem;
+	}
+	.login .content{
+		width: 70%;
+	}
+}
+@media screen and (max-width:955px){
+	.login .secction{
+		flex-direction: column;
+	}
+	.login .left{
+		width: 90%;
+	}
+	.login .botm{
+		margin-bottom: 0.6rem;
+	}
+	.login .content{
+		width: 80%;
+	}
+}
+@media screen and (max-width:560px){
+	.login .title{
+		font-size: 0.7rem;
+		line-height: 0.9rem;
+		margin: 0.5rem 0 0.4rem 0;
+	}
+	.login .content{
+		width: 90%;
+		font-size: 0.28rem;
+		line-height: 0.32rem;
+	}
+	.login .name{
+		font-size: 0.7rem;
+	}
+	.login .cont{
+		font-size: 0.4rem;
+		width: 50%;
+		line-height: 0.5rem;
+	}
+	.login .lis{
+		font-size: 0.27rem;
+		margin-top: 0.4rem;
+		padding-bottom: 0.2rem;
+		width: 100%;
+	}
+	.login .loginBtn{
+		font-size: 0.3rem;
+		font-weight: 600;
+		padding: 0.24rem 0;
+		border-radius: 0.25rem;
+		margin: 0.5rem 0 0.8rem 0;
+	}
+	.login .botm{
+		display: none;
+	}
+	.login .contTwo{
+		width: 60%;
+	}
+	.login .two{
+		flex-direction: column;
+		flex: 1;
+	}
+	.login .right{
+		margin-left: 0;
+	}
+	.login .uil input{
+		font-size: 0.2rem;
+	}
+}

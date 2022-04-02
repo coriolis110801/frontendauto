@@ -1,0 +1,325 @@
+
+.EditPwdScreen .hide{
+    opacity: 0;
+}
+.EditPwdScreen select{
+	background-color: rgb(232,244,244);
+}
+.EditPwdScreen .center{
+	align-items: flex-start;
+	margin-top: 0.4rem;
+}
+
+
+
+.EditPwdScreen .right{
+	flex: 1;
+}
+.EditPwdScreen .topName{
+	color: rgb(67,117,123);
+	font-size: 0.34rem;
+	font-weight: 600;
+	flex: 1;
+	text-align: left;
+}
+.EditPwdScreen .peopleName{
+	color: rgb(134,201,209);
+}
+.EditPwdScreen .detail{
+	color: #000;
+	font-size: 0.14rem;
+	margin-top: 0.2rem;
+	line-height: 0.2rem;
+	width: 70%;
+}
+.EditPwdScreen .account{
+	background-color: rgb(232,244,244);
+	padding: 0.4rem 0.2rem;
+	width: 100%;
+	margin: 0.6rem 0;
+	color: #000;
+}
+.EditPwdScreen .account_title{
+	color: rgb(67,117,123);
+	font-weight: 600;
+}
+.EditPwdScreen .lis{
+	flex-wrap: wrap;
+}
+.EditPwdScreen .lis_item{
+	width: 48%;
+	font-size: 0.14rem;
+	margin: 0.2rem 0 0.1rem 0;
+	padding-bottom: 0.1rem;
+	border-bottom: 2px solid #555;
+}
+.EditPwdScreen .entry{
+	background-color: rgb(232,244,244);
+	flex: 1;
+	margin-left: 0.04rem;
+}
+.EditPwdScreen .subject{
+	font-weight: 600;
+}
+.EditPwdScreen .entry::placeholder{
+	color: #000;
+}
+.EditPwdScreen .save{
+	background-color: rgb(67,117,123);
+	padding: 0.11rem 0.28rem;
+	border-radius: 0.14rem;
+	color: #fff;
+	font-size: 0.16rem;
+	cursor: pointer;
+}
+.EditPwdScreen .account_titleTwo{
+	color: rgb(67,117,123);
+	font-weight: 600;
+	margin-top: 0.4rem;
+}
+.EditPwdScreen .lisTwo{
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+}
+.EditPwdScreen .saveTwo{
+	background-color: rgb(67,117,123);
+	padding: 0.11rem 0.28rem;
+	border-radius: 0.14rem;
+	color: #fff;
+	font-size: 0.16rem;
+	cursor: pointer;
+	margin-top: 0.2rem;
+}
+.EditPwdScreen .subjectOne{
+	color: #000;
+	font-weight: 600;
+}
+.EditPwdScreen .entryOne::placeholder{
+	color: #000;
+}
+.EditPwdScreen .account_titleOne{
+	color: rgb(67,117,123);
+	font-weight: 600;
+	margin: 0.4rem 0.3rem 0 0.3rem;
+}
+.EditPwdScreen .lisOne{
+	flex-wrap: wrap;
+	padding: 0 0.3rem;
+	flex-direction: row-reverse;
+}
+.EditPwdScreen .select{
+	border: none;
+}
+.EditPwdScreen .subjectThree{
+	color: #000;
+	font-weight: 600;
+	margin-left: 0.16rem;
+}
+.EditPwdScreen .boxs,.boxsOne{
+	width: 0.3rem;
+	height: 0.3rem;
+	border-radius: 0.04rem;
+	background-color: rgb(67,117,123);
+	cursor: pointer;
+}
+.EditPwdScreen .boxCli,.boxCliOne{
+	width: 0.3rem;
+	height: 0.3rem;
+	background: url(../img/index/dui.png) no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
+		display: none;
+}
+.EditPwdScreen .boxUi{
+	flex-wrap: wrap;
+	margin: 0.1rem 0.2rem 0.5rem 0.3rem;
+	color: #000;
+	font-size: 0.13rem;
+}
+.EditPwdScreen .boxUi_item{
+	width: 30%;
+	height: 2.4rem;
+	margin: 0.1rem 0.1rem 0.1rem 0;
+	border: 2px solid rgb(67,117,123);
+	padding: 0.2rem;
+	position: relative;
+}
+.EditPwdScreen .add{
+	width: 30%;
+	height: 2.4rem;
+	border: 2px dashed #ccc;
+	margin: 0.1rem 0.1rem 0.1rem 0;
+	flex-direction: column;
+	border-radius: 0.1rem;
+	cursor: pointer;
+}
+.EditPwdScreen .addContent{
+	font-weight: 600;
+	font-size: 0.18rem;
+	margin-top: 0.1rem;
+}
+.EditPwdScreen .addImg{
+	width: 0.4rem;
+	height: 0.4rem;
+}
+.EditPwdScreen .boxUi_item:hover .default {
+	display: block;
+}
+.EditPwdScreen .boxName{
+	color: rgb(67,117,123);
+	font-weight: 600;
+	line-height: 0.3rem;
+}
+.EditPwdScreen .select_item{
+	line-height: 0.15rem;
+	font-size: 0.14rem;
+	margin-top: 0.1rem;
+}
+.EditPwdScreen .modify{
+	position: absolute;
+	bottom: 0.1rem;
+	right: 0.2rem;
+	flex-direction: row-reverse;
+	cursor: pointer;
+}
+.EditPwdScreen .default{
+	position: absolute;
+	bottom: 0;
+	left: 0.2rem;
+	color: #fff;
+	background-color: rgb(67,117,123);
+	padding: 0.1rem 0.28rem;
+	border-radius:  0.12rem 0.12rem 0 0;
+	cursor: pointer;
+	display: none;
+}
+.EditPwdScreen .two{
+	display: none;
+}
+.EditPwdScreen .imgOne{
+	width: 0.16rem;
+	height: 0.16rem;
+	margin-left: 0.1rem;
+}
+.EditPwdScreen .imgTwo{
+	width: 0.18rem;
+	height: 0.18rem;
+}
+.EditPwdScreen .err{
+	width: 100%;
+	cursor: pointer;
+	display: flex;
+	flex-direction: row-reverse;
+}
+.EditPwdScreen .addressBox{
+	margin-top: 0.2rem;
+	display: none;
+	padding: 0.2rem 0;
+	background-color: rgb(232,244,244);
+}
+.EditPwdScreen .addressBox input,.EditPwdScreen .addressBox select{
+	background-color: rgb(232,244,244) !important;
+}
+
+
+@media screen and (max-width:1180px){
+	.EditPwdScreen .lis_item{
+		width: 100%;
+	}
+	.EditPwdScreen .saveTwo{
+		margin-top: -0.7rem;
+	}
+	.EditPwdScreen .lisTwo,.EditPwdScreen .lisOne{
+		flex-direction: row;
+	}
+	.EditPwdScreen .boxUi_item,.EditPwdScreen .add{
+		width: 47%;
+		height: 3.3rem;
+		font-size: 0.2rem;
+	}
+	.EditPwdScreen .select_item{
+		font-size: 0.16rem;
+		line-height: 0.26rem;
+	}
+	.EditPwdScreen .one{
+		display: none;
+	}
+	.EditPwdScreen .two{
+		display: block;
+    }
+}
+@media screen and (max-width:865px){
+	.EditPwdScreen .boxUi_item,.EditPwdScreen .add{
+		width: 90%;
+		font-size: 0.2rem;
+		padding-top: 0.3rem;
+	}
+	.EditPwdScreen .select_item{
+		margin: 0.2rem 0 1rem 0;
+		font-size: 0.2rem;
+	}
+}
+@media screen and (max-width:690px){
+	.EditPwdScreen .center{
+		flex-direction: column;
+	}
+	.EditPwdScreen .left{
+		width: 100%;
+		font-size: 0.16rem;
+		line-height: 0.3rem;
+	}
+	.EditPwdScreen .title,.EditPwdScreen .name{
+		font-size: 0.28rem;
+	}
+	.EditPwdScreen .topName{
+		font-size: 0.44rem;
+		padding: 0 0.3rem;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.EditPwdScreen .detail{
+		font-size: 0.2rem;
+		margin: 0.5rem 0.2rem;
+		line-height: 0.26rem;
+	}
+    .EditPwdScreen .account_title,
+    .EditPwdScreen .account_titleTwo,
+    .EditPwdScreen .account_titleOne{
+		font-size: 0.3rem;
+		width: 60%;
+		line-height: 0.4rem;
+	}
+	.EditPwdScreen .lis_item{
+		font-size: 0.19rem;
+	}
+	.EditPwdScreen .entry::placeholder{
+		font-size: 0.19rem;
+	}
+	.EditPwdScreen .entryOne::placeholder{
+		font-size: 0.19rem;
+	}
+    .EditPwdScreen .save,
+    .EditPwdScreen .saveTwo{
+		margin: 0.3rem 0 0.1rem 0;
+		width: 100%;
+		text-align: center;
+		padding: 0.16rem 0;
+		font-size: 0.2rem;
+		font-weight: 600;
+		border-radius: 0.18rem;
+	}
+	.EditPwdScreen .saveTwo{
+		margin-top: -0.3rem;
+	}
+	.EditPwdScreen .boxs{
+		width: 0.44rem;
+		height: 0.44rem;
+	}
+	.EditPwdScreen .boxCli{
+		width: 0.44rem;
+		height: 0.44rem;
+	}
+	.EditPwdScreen .names{
+		margin-top: 0.2rem;
+	}
+}

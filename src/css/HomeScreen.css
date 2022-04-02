@@ -1,0 +1,309 @@
+
+
+.home .swiper-wrapper {
+
+    position: relative;
+    margin-bottom: 30px;
+}
+.home .swiper-slide {
+    
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.home .swiper-button {
+    width: 0.2rem;height: 0.3rem;
+}
+.home .car{
+	width: 100%;
+	height: 6rem;
+	background: url(../img/index/car.png) no-repeat;
+	background-size: 100% 100%;
+	border-bottom-right-radius: 2.1rem;
+	border-bottom-left-radius: 2.1rem;
+	position: relative;
+}
+.home .content{
+	position: absolute;
+	left: 6%;
+	top: 27%;
+}
+.home .title{ 
+	font-size: 0.6rem;
+	font-weight: 600;
+	line-height: 0.6rem;
+}
+.home .cont{
+	font-size: 0.15rem;
+	width: 45%;
+	margin: 0.2rem 0;
+	line-height: 0.2rem;
+}
+.home .btn{
+	background-color: #3F757B;
+	font-size: 0.15rem;
+	width: 1.5rem;
+	padding: 12px 0;
+	border-radius: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+.home .ul-title{
+	color: #3F757B;
+	font-weight: 600;
+	margin: 0.8rem 0 0.4rem 0.6rem;
+}
+.home .uls{
+	flex-wrap: wrap;
+	width: 100%;
+	padding-left: 0.6rem;
+}
+.home .ulBox{
+	text-align: center;
+	width: 20%;
+	margin: 0 5% 0.5rem 0;
+}
+.home .ulBox>img{
+	width: 100%; 
+	height: 202px;
+}
+.home .moneytext {
+    color: #747A81;
+    font-size: 0.14rem;
+    font-weight: 600;
+    margin: 0.08rem 0 0.1rem 0;
+    display: flex;
+}
+.home .money{
+	color: #747A81;
+	font-size: 0.14rem;
+	font-weight: 600;
+	margin: 0.08rem 0 0.1rem 0;
+	display: flex;
+	flex-direction: row-reverse;
+}
+.home .btnImg{
+	width: 0.22rem;
+	height: 0.18rem;
+	margin-right: 0.03rem;
+}
+.home .btnLeft{
+	flex: 2;
+	margin-right: 8%;
+	padding: 0.1rem 0;
+	border-radius: 0.1rem;
+	background-color: #3F757B;
+	cursor: pointer;
+}
+.home .btnRight{
+	flex: 1;
+	padding: 0.1rem 0;
+	border-radius: 0.1rem;
+	background-color: rgb(255,192,8);
+	cursor: pointer;
+}
+.home .swiperTitle{
+	color: #3F757B;
+	font-weight: 600;
+	margin: 0.4rem 0 0.4rem 0.6rem;
+}
+
+.home .swiper-containerFour,
+.home .swiper-containerThree,
+.home .swiper-containerTwo,
+.home .swiper-containerOne {
+	/* width: calc(100% - 1.2rem); */
+	width: 100%;
+	height: 320px;
+	position: relative;
+	margin-bottom: 0.56rem;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.home .swiper-containerThree,
+.home .swiper-containerTwo,
+.home .swiper-containerOne {
+	display: none;
+}
+.home .swiperImg{
+	height: 0;
+	width: 70%;
+	padding-top: 91%;
+	position: relative;
+}
+.home .swiperImg > img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+.home .name{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-color: rgb(92,133,139);
+	height: 24%;
+	font-size: 0.16rem;
+	font-weight: 600;
+}
+@media screen and (max-width:935px){
+	.home .ulBox{
+		text-align: center;
+		width: 30%;
+		margin: 0 2% 0.5rem 0;
+	}
+	.home .cont{
+		font-size: 0.14rem;
+		width: 70%;
+		margin: 0.2rem 0;
+	}
+	.home .car{
+		border-bottom-right-radius: 1.5rem;
+		border-bottom-left-radius: 1.5rem;
+	}
+	.home .money span {
+		color: #3F757B;
+		margin-left: 10px;
+	}
+	.home .uls{
+		flex-wrap: wrap;
+		width: 100%;
+		margin: 0 auto;
+		padding-left: 0.4rem;
+	}
+	.home .swiper-containerFour,
+	.home .swiper-containerTwo,
+	.home .swiper-containerOne{
+		display: none;
+	}
+	.home .swiper-containerThree{
+		display: block;
+		height: 320px;
+	}
+}
+@media screen and (max-width:640px){
+	.home .ulBox{
+		text-align: center;
+		width: 48%;
+		margin: 0 1.5% 0.5rem 0;
+	}
+	.home .cont{
+		font-size: 0.14rem;
+		width: 90%;
+		margin: 0.2rem 0;
+	}
+	.home .car{
+		border-bottom-right-radius: 1rem;
+		border-bottom-left-radius: 1rem;
+	}
+	.home .content.absolute{
+		position: absolute;
+		left: 6%;
+		top: 10%;
+	}
+	.home .uls{
+		flex-wrap: wrap;
+		width: 100%;
+		margin: 0 auto;
+		padding-left: 0.2rem;
+	}
+	.home .swiper-containerFour,
+	.home .swiper-containerThree,
+	.home .swiper-containerOne{
+		display: none;
+	}
+	.home .swiper-containerTwo{
+		display: block;
+		height: 350px;
+	}
+}
+.home .black {
+ color: black;
+}
+@media screen and (max-width:540px){
+	.home .car{
+		height: 11.8rem;
+		border-bottom-right-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
+	}
+	.home .content{
+		top: 17%;
+	}
+	.home .title{
+		font-size: 0.66rem;
+		font-weight: 600;
+		line-height: 0.9rem;
+	}
+	.home .cont{
+		font-size: 0.28rem;
+		width: 90%;
+		margin: 0.3rem 0;
+		line-height: 0.34rem;
+	}
+	.home .btn{
+		font-size: 0.23rem;
+		font-weight: 600;
+		width: 2.6rem;
+		padding: 0.23rem 0;
+		border-radius: 0.26rem;
+	}
+	.home .ulBox{
+		text-align: center;
+		width: 80%;
+		margin-bottom: 0.7rem;
+	}
+	.home .ul-title{
+		text-align: center;
+		font-size: 0.44rem;
+		margin: 1.4rem 0 0.8rem 0;
+	}
+	.home .uls{
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.home .money{
+		font-size: 0.3rem;
+		margin: 0.08rem 0 0.8rem 0;
+	}
+	.home .btnLeft{
+		margin-right: 5%;
+		padding: 0.24rem 0;
+		font-size: 0.34rem;
+		border-radius: 0.3rem;
+	}
+	.home .btnRight{
+		padding: 0.2rem 0;
+		border-radius: 0.3rem;
+		font-size: 0.4rem;
+		font-weight: 600;
+	}
+	.home .btnImg{
+		width: 0.55rem;
+		height: 0.5rem;
+	}
+	.home .swiperTitle{
+		text-align: center;
+		font-size: 0.46rem;
+		margin: 0.4rem 0 0.7rem 0;
+	}
+	.home .swiper-containerFour,
+	.home .swiper-containerThree,
+	.home .swiper-containerTwo{
+		display: none;
+	}
+	.home .swiper-containerOne {
+		display: block;
+		height: 565px;
+	}
+	.home .name{
+		font-size: 0.38rem;
+	}
+}

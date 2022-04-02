@@ -1,0 +1,389 @@
+.AddressScreen .topName{
+    font-size: 0.44rem;
+    padding: 0 0.3rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.AddressScreen .detail{
+    font-size: 0.2rem;
+    margin: 0.5rem 0.2rem;
+    line-height: 0.26rem;
+}
+
+.AddressScreen .err {
+    padding-right: 0.2rem;
+    margin-bottom: -0.2rem;
+}
+.AddressScreen .err>img {
+    width: 0.3rem;height: 0.3rem;
+}
+.AddressScreen .modify>.errs{
+    width: 0.16rem;height: 0.16rem;margin-left: 0.1rem;
+}
+.AddressScreen .modify>.bi {
+    width: 0.18rem;height: 0.18rem;
+}
+.AddressScreen .boxUi_item>.flex-center {
+    flex-wrap: wrap;
+}
+.AddressScreen .mar {
+    margin: -0.04rem 0.04rem 0;
+}
+.AddressScreen .countrySel{
+    flex: 1;background-color: #fff;
+}
+.AddressScreen  select{
+	background-color: rgb(232,244,244);
+}
+.AddressScreen .center{
+	align-items: flex-start;
+	margin-top: 0.4rem;
+}
+
+
+.AddressScreen .right{
+	flex: 1;
+}
+.AddressScreen .topName{
+	color: rgb(67,117,123);
+	font-size: 0.34rem;
+	font-weight: 600;
+	flex: 1;
+	text-align: left;
+}
+.AddressScreen .peopleName{
+	color: rgb(134,201,209);
+}
+.AddressScreen .detail{
+	color: #000;
+	font-size: 0.14rem;
+	margin-top: 0.2rem;
+	line-height: 0.2rem;
+	width: 70%;
+}
+.AddressScreen .account{
+	background-color: rgb(232,244,244);
+	padding: 0.4rem 0.2rem;
+	width: 100%;
+	/* margin: 0.6rem 0; */
+	color: #000;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9;
+	width: 660px;
+	height: 700px;
+	overflow-y: auto;
+	z-index: 10;
+}
+.AddressScreen .account_title{
+	color: rgb(67,117,123);
+	font-weight: 600;
+}
+.AddressScreen .lis{
+	flex-wrap: wrap;
+}
+.AddressScreen .lis_item{
+	width: 48%;
+	font-size: 0.14rem;
+	margin: 0.2rem 0 0.1rem 0;
+	padding-bottom: 0.1rem;
+	border-bottom: 2px solid #555;
+}
+.AddressScreen .entry{
+	background-color: rgb(232,244,244);
+	flex: 1;
+	margin-left: 0.04rem;
+}
+.AddressScreen .subject{
+	font-weight: 600;
+}
+.AddressScreen .entry::placeholder{
+	color: #000;
+}
+.AddressScreen .save{
+	background-color: rgb(67,117,123);
+	padding: 0.11rem 0.28rem;
+	border-radius: 0.14rem;
+	color: #fff;
+	font-size: 0.16rem;
+	cursor: pointer;
+}
+.AddressScreen .account_titleTwo{
+	color: rgb(67,117,123);
+	font-weight: 600;
+	margin-top: 0.4rem;
+}
+.AddressScreen .lisTwo{
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+}
+.AddressScreen .saveTwo{
+	background-color: rgb(67,117,123);
+	padding: 0.11rem 0.28rem;
+	border-radius: 0.14rem;
+	color: #fff;
+	font-size: 0.16rem;
+	cursor: pointer;
+	margin-top: 0.2rem;
+}
+.AddressScreen .subjectOne{
+	color: #000;
+	font-weight: 600;
+	margin-right: 0.05rem;
+}
+.AddressScreen .entryOne::placeholder{
+	color: #000;
+}
+.AddressScreen .account_titleOne{
+	color: rgb(67,117,123);
+	font-weight: 600;
+	margin: 0.4rem 0.3rem 0 0.3rem;
+}
+.AddressScreen .lisOne{
+	flex-wrap: wrap;
+	padding: 0 0.3rem;
+	flex-direction: row-reverse;
+}
+.AddressScreen .select{
+	border: none;
+}
+.AddressScreen .subjectThree{
+	color: #000;
+	font-weight: 600;
+	margin-left: 0.16rem;
+}
+.AddressScreen .boxs,.boxsOne{
+	width: 0.3rem;
+	height: 0.3rem;
+	border-radius: 0.04rem;
+	background-color: rgb(67,117,123);
+	cursor: pointer;
+}
+.AddressScreen .boxCli,.boxCliOne{
+	width: 0.3rem;
+	height: 0.3rem;
+	background: url(../img/index/dui.png) no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
+		display: none;
+}
+.AddressScreen .boxUi{
+	flex-wrap: wrap;
+	margin: 0.1rem 0.2rem 0.5rem 0.3rem;
+	color: #000;
+	font-size: 0.13rem;
+}
+.AddressScreen .boxUi_item{
+	width: 30%;
+	height: 2.4rem;
+	margin: 0.1rem 0.1rem 0.1rem 0;
+	border: 2px solid rgb(67,117,123);
+	padding: 0.2rem;
+	position: relative;
+}
+.AddressScreen .add{
+	width: 30%;
+	height: 2.4rem;
+	border: 2px dashed #ccc;
+	margin: 0.1rem 0.1rem 0.1rem 0;
+	flex-direction: column;
+	border-radius: 0.1rem;
+	cursor: pointer;
+}
+.AddressScreen .addContent{
+	font-weight: 600;
+	font-size: 0.18rem;
+	margin-top: 0.1rem;
+}
+.AddressScreen .addImg{
+	width: 0.4rem;
+	height: 0.4rem;
+}
+.AddressScreen .boxUi_item:hover .default {
+	display: block;
+}
+.AddressScreen .boxName{
+	color: rgb(67,117,123);
+	font-weight: 600;
+	line-height: 0.3rem;
+}
+.AddressScreen .select_item{
+	line-height: 0.15rem;
+	font-size: 0.14rem;
+	margin-top: 0.1rem;
+}
+.AddressScreen .modify{
+	position: absolute;
+	bottom: 0.1rem;
+	right: 0.2rem;
+	flex-direction: row-reverse;
+	cursor: pointer;
+}
+.AddressScreen .default{
+	position: absolute;
+	bottom: 0;
+	left: 0.2rem;
+	color: #fff;
+	background-color: rgb(67,117,123);
+	padding: 0.1rem 0.28rem;
+	border-radius:  0.12rem 0.12rem 0 0;
+	cursor: pointer;
+	display: none;
+}
+.AddressScreen .two{
+	display: none;
+}
+.AddressScreen .imgOne{
+	width: 0.16rem;
+	height: 0.16rem;
+	margin-left: 0.1rem;
+}
+.AddressScreen .imgTwo{
+	width: 0.18rem;
+	height: 0.18rem;
+}
+.AddressScreen .err{
+	width: 100%;
+	cursor: pointer;
+	display: flex;
+	flex-direction: row-reverse;
+}
+.AddressScreen .addressBox{
+	display: none;
+	padding: 0.2rem 0;
+	background-color: rgb(232,244,244);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 10;
+}
+.AddressScreen .addressBox input,.addressBox select{
+	background-color: rgb(232,244,244) !important;
+}
+.AddressScreen .boxUi_item_default {
+	padding: 0 !important;
+}
+.AddressScreen .boxUi_item_header {
+	width: 100%;
+	height: 0.3rem;
+	border-bottom: 2px solid rgb(67,117,123);
+	display: flex;
+	align-items: center;
+	padding-left: 0.2rem;
+}
+.AddressScreen .boxUi_item_default_body {
+	padding: 0.2rem;
+}
+.AddressScreen .boxUi_item_header img {
+	width: 30%;
+	height: 0.2rem;
+	object-fit: contain;
+	margin-left: 0.05rem;
+}
+
+@media screen and (max-width:1180px){
+	.AddressScreen .lis_item{
+		width: 100%;
+	}
+	.AddressScreen .saveTwo{
+		margin-top: -0.7rem;
+	}
+	.AddressScreen .lisTwo,.AddressScreen .lisOne{
+		flex-direction: row;
+	}
+	.AddressScreen .boxUi_item,.AddressScreen .add{
+		width: 47%;
+		height: 3.3rem;
+		font-size: 0.2rem;
+	}
+	.AddressScreen .select_item{
+		font-size: 0.16rem;
+		line-height: 0.26rem;
+	}
+	.AddressScreen .one{
+		display: none;
+	}
+	.AddressScreen .two{
+		display: block;
+    }
+}
+@media screen and (max-width:865px){
+	.AddressScreen .boxUi_item,.AddressScreen .add{
+		width: 90%;
+		font-size: 0.2rem;
+		padding-top: 0.3rem;
+	}
+	.AddressScreen .select_item{
+		margin: 0.2rem 0 1rem 0;
+		font-size: 0.2rem;
+	}
+	.AddressScreen .account {
+		width: 90%;
+	}
+}
+@media screen and (max-width:690px){
+	.AddressScreen .center{
+		flex-direction: column;
+	}
+	.AddressScreen .left{
+		width: 100%;
+		font-size: 0.16rem;
+		line-height: 0.3rem;
+	}
+	.AddressScreen .title,.AddressScreen .name{
+		font-size: 0.28rem;
+	}
+	
+    .AddressScreen .account_title,
+    .AddressScreen .account_titleTwo,
+    .AddressScreen .account_titleOne{
+		font-size: 0.3rem;
+		width: 60%;
+		line-height: 0.4rem;
+	}
+	.AddressScreen .lis_item{
+		font-size: 0.19rem;
+	}
+	.AddressScreen .entry::placeholder{
+		font-size: 0.19rem;
+	}
+	.AddressScreen .entryOne::placeholder{
+		font-size: 0.19rem;
+	}
+    .AddressScreen .save,
+    .AddressScreen .saveTwo{
+		margin: 0.3rem 0 0.1rem 0;
+		width: 100%;
+		text-align: center;
+		padding: 0.16rem 0;
+		font-size: 0.2rem;
+		font-weight: 600;
+		border-radius: 0.18rem;
+	}
+	.AddressScreen .saveTwo{
+		margin-top: -0.3rem;
+	}
+	.AddressScreen .boxs{
+		width: 0.44rem;
+		height: 0.44rem;
+	}
+	.AddressScreen .boxCli{
+		width: 0.44rem;
+		height: 0.44rem;
+	}
+	.AddressScreen .names{
+		margin-top: 0.2rem;
+	}
+	.AddressScreen .boxUi_item_header {
+		height: 0.5rem;
+	}
+	.AddressScreen .boxUi_item_header img {
+		height: 0.35rem;
+	}
+	.AddressScreen .addressBox {
+		width: 90%;
+	}
+}

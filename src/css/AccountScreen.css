@@ -1,0 +1,41 @@
+.accountScreen>.maxWidth {
+    padding: 0 0.5rem;
+}
+.accountScreen .left{
+	background-color: rgb(135,202,210);
+	border-radius: 0.06rem;
+	margin: 0 5% 0.5rem 0;
+	width: 28%;
+	padding: 0.4rem 0.3rem;
+	font-weight: 600;
+	line-height: 0.24rem;
+	font-size: 0.14rem;
+	flex: 0 0 20%;
+}
+.accountScreen .left div{
+	cursor: pointer;
+}
+.accountScreen .title{
+	color: #000;
+	font-weight: 600;
+	margin-bottom: 0.26rem;
+	font-size: 0.2rem;
+}
+.accountScreen .titlee{
+	color: #000;
+}
+.accountScreen .name{
+	font-size: 0.2rem;
+	margin-top: 0.4rem;
+}
+.accountScreen .flex-between {
+	align-items: flex-start;
+}
+
+@media screen and (max-width:690px){
+	.AddressScreen .left{
+		width: 100%;
+		font-size: 0.16rem;
+		line-height: 0.3rem;
+	}
+}

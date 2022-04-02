@@ -1,0 +1,146 @@
+.about .bgAbout {
+    background-color: rgb(232, 244, 244);
+}
+.about .top {
+	position: relative;
+}
+
+.about .aboutCar {
+    width: 36%;
+    height: 87%;
+	margin: 3% 0 -8% 10%;
+	z-index: 999;
+}
+.about .aboutCarTwo{
+	width: 100%;
+	margin: 0.6rem auto 0 auto;
+	display: none;
+}
+.about .aboutCarTwo img{
+    width: 100%;height: 100%;
+}
+.about .aboutCont {
+	position: absolute;
+	top: 30%;
+	left: 54%;
+	color: #000;
+	width: 30%;
+	font-size: 0.14rem;
+}
+
+.about .topName {
+	font-size: 0.6rem;
+	font-weight: 600;
+	margin-bottom: 0.3rem;
+}
+
+.about .secction {
+	margin: 12% 10% 5% 10%;
+	color: #000;
+}
+
+.about .secctItem {
+	flex: 1;
+	font-size: 0.13rem;
+}
+
+.about .secctBtn {
+	flex-direction: column;
+	padding: 5% 0;
+}
+
+.about .btns {
+	font-size: 0.14rem;
+	background-color: rgb(63, 117, 123);
+	margin-top: 0.3rem;
+	padding: 0.1rem 0.38rem;
+	border-radius: 0.1rem;
+	cursor: pointer;
+}
+.about .title{
+	font-size: 0.25rem;
+	font-weight: 600;
+}
+.about .mr1 {
+    margin-right: 10%;
+}
+.about .operate {
+    background-color: rgb(135, 200, 210);
+}
+@media screen and (max-width:950px){
+	.about .aboutCont {
+		top: 10%;
+		left: 54%;
+		width: 40%;
+		font-size: 0.16rem;
+	}
+	.about .topName {
+		font-size: 0.4rem;
+		margin-bottom: 0.1rem;
+	}
+	.about .secctItem{
+		font-size: 0.16rem;
+	}
+}
+@media screen and (max-width:780px){
+	.about .aboutCont {
+		top: 10%;
+		left: 50%;
+		width: 48%;
+		font-size: 0.16rem;
+	}
+}
+@media screen and (max-width:560px){
+	.about .top{
+		height: 11.5rem;
+		position: static;
+		padding: 0 10%;
+	}
+	.about .aboutCar{
+		display: none;
+	}
+	.about .aboutCarTwo{
+		display: block;
+	}
+	.about .aboutCont {
+		position: static;
+		color: #000;
+		width: 100%;
+		font-size: 0.3rem;
+		line-height: 0.36rem;
+	}
+	.about .topName{
+		font-size: 0.7rem;
+		font-weight: 600;
+		padding: 0.84rem 0 0.7rem 0;
+		color: rgb(67,117,123);
+	}
+	.about .secction{
+		margin-top: 38%;
+		flex-direction: column;
+	}
+	.about .secctItem {
+		flex: 1;
+		font-size: 0.3rem;
+		line-height: 0.36rem;
+		margin-bottom: 0.4rem;
+	}
+	.about .secctBtn {
+		padding: 15% 0;
+	}
+	.about .title{
+		font-size: 0.7rem;
+		width: 70%;
+		line-height:0.9rem;
+		text-align: center;
+	}
+	.about .btns {
+		font-size: 0.3rem;
+		margin-top: 0.5rem;
+		font-weight: 600;
+		width: 80%;
+		text-align: center;
+		padding: 0.27rem 0;
+		border-radius: 0.3rem;
+	}
+}

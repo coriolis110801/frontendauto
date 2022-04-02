@@ -1,0 +1,1 @@
+export const baseAPIUrl = 'https://www.autosqueak.com/api/';
