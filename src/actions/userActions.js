@@ -77,9 +77,7 @@ export const login = (email, password) => async (dispatch) => {
 export const logout = () => (dispatch) => {
     localStorage.removeItem('userInfo')
     dispatch({ type: USER_LOGOUT })
-    // dispatch({ type: USER_DETAILS_RESET })
-    // dispatch({ type: ORDER_LIST_MY_RESET })
-    // dispatch({ type: USER_LIST_RESET })
+    dispatch(messageUpdate('Log Out Success!'), 'success');
 }
 
 
@@ -161,8 +159,8 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
     }
 }
 
-
-export const updateUserProfile = (user) => async (dispatch, getState) => {
+// 修改密码
+export const changePwd = (user) => async (dispatch, getState) => {
     try {
         dispatch({
             type: USER_UPDATE_PROFILE_REQUEST
@@ -180,22 +178,35 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.put(
-            `/api/users/profile/update/`,
-            user,
+            baseAPIUrl+ `profile/update`,
+            {
+                email: userInfo.username,
+                password: user.password,
+                newPassword: user.newPassword
+            },
             config
         )
+        if(data && data.code==0) {
+            dispatch({
+                type: USER_UPDATE_PROFILE_SUCCESS,
+                payload: data
+            })
+    
+            dispatch({
+                type: USER_LOGIN_SUCCESS,
+                payload: data
+            })
+            localStorage.setItem('userInfo', JSON.stringify(data))
+        }else {
+            dispatch({
+                type: USER_UPDATE_PROFILE_FAIL,
+                payload:  data.message,
+            })
+            dispatch(messageUpdate(data.message))
+        }
+        
 
-        dispatch({
-            type: USER_UPDATE_PROFILE_SUCCESS,
-            payload: data
-        })
-
-        dispatch({
-            type: USER_LOGIN_SUCCESS,
-            payload: data
-        })
-
-        localStorage.setItem('userInfo', JSON.stringify(data))
+        
 
     } catch (error) {
         dispatch({
@@ -204,6 +215,7 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
                 ? error.response.data.detail
                 : error.message,
         })
+        dispatch(messageUpdate(error.response && error.response.data.detail? error.response.data.detail: error.message))
     }
 }
 

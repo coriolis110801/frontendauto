@@ -1,34 +1,30 @@
 import {
-    ORDER_REQUEST,
-    GET_ORDER_SUCCESS,
+    DESIGN_REQUEST,
+    GET_DESIGN_SUCCESS,
     REQUEST_COMPLETE
-} from '../constants/orderConstants'
-
-export const orderReducer = (state = {orders: [],total: 0,pageArr: []}, action) => {
+} from '../constants/designConstants'
+export const designReducers = (state = { designs: [],total: 0,pageArr:[]}, action) => {
     switch (action.type) {
-        case ORDER_REQUEST:
+        case DESIGN_REQUEST:
             return {
                 ...state,
                 loading: true
             }
-
-        case GET_ORDER_SUCCESS:
-            // console.log(action,99933333);
+        case GET_DESIGN_SUCCESS:
             return {
                 loading: false,
-                orders: action.payload,
+                designs:  action.payload,
                 total: action.total,
                 pageArr: action.pageArr
             }
-
         case REQUEST_COMPLETE:
             return {
                 ...state,
                 loading: false
             }
-
-
         default:
-            return state
+            return state;
+            
+            
     }
 }

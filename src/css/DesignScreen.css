@@ -1,161 +1,429 @@
-.design .padLR{
-    padding: 0 0.5rem;
+
+.DesignScreen {
+	padding-bottom: 100px;
+}
+.DesignScreen  .center {
+	align-items: flex-start;
+	margin-top: 0.4rem;
 }
 
-.design .title{
-	color: rgb(67,117,123);
-	font-size: 0.33rem;
-	margin: 0.3rem 0 0.2rem 0;
-	font-weight: 600;
-}
-.design .cont{
-	color: #000;
-	width: 50%;
-	font-size: 0.14rem;
-	line-height: 0.2rem;
-}
-.design .btn{
-	background-color: rgb(255,192,8);
-	padding: 0.12rem 0.34rem;
-	font-size: 0.15rem;
-	border-radius: 0.13rem;
-	cursor: pointer;
-}
-.design .secction{
-	padding-bottom: 0.7rem;
-}
-.design .car{
-	width: 100%;
-	height: 4.2rem;
-	background: url(../img/index/carui2.png) no-repeat;
-	background-size: cover;
-}
-.design .name{
-	font-size: 0.6rem;
-	padding-top: 10%;
-	padding-left: 0.5rem;
-	font-weight: 600;
-	width: 54%;
-	line-height: 0.7rem;
-}
-.design .uls{
-	flex-wrap: wrap;
-	width: 100%;
-	padding-left: 0.6rem;
-	margin: 0.8rem 0 0.4rem 0;
-}
-.design .ulBox{
-	text-align: center;
-	width: 20%;
+.DesignScreen .left {
+	background-color: rgb(135, 202, 210);
+	border-radius: 0.06rem;
 	margin: 0 5% 0.5rem 0;
-}
-.design .money{
-	color: #747A81;
-	font-size: 0.13rem;
+	width: 28%;
+	padding: 0.4rem 0.3rem;
 	font-weight: 600;
-	margin: 0.08rem 0 0.1rem 0;
-	display: flex;
-	flex-direction: row-reverse;
+	line-height: 0.24rem;
+	font-size: 0.14rem;
 }
-.design .btnImg{
-	width: 0.2rem;
-	height: 0.16rem;
-	margin-right: 0.05rem;
-}
-.design .btnRight{
-	flex: 1;
-	padding: 0.11rem 0;
-	border-radius: 0.14rem;
-	background-color: rgb(255,192,8);
+
+.DesignScreen .left div {
 	cursor: pointer;
 }
-@media screen and (max-width:935px){
-	.design .ulBox{
-		text-align: center;
-		width: 30%;
-		margin: 0 2% 0.5rem 0;
+
+.DesignScreen .title {
+	font-weight: 600;
+	margin-bottom: 0.26rem;
+	font-size: 0.2rem;
+}
+
+.DesignScreen .name {
+	font-size: 0.2rem;
+	margin-top: 0.4rem;
+}
+
+.DesignScreen.right{
+	flex: 1;
+	color: black;
+}
+
+.DesignScreen  .topName {
+	color: rgb(67, 117, 123);
+	font-size: 0.34rem;
+	font-weight: 600;
+	flex: 1;
+	text-align: left;
+	
+}
+
+.DesignScreen .detail {
+	color: #000;
+	font-size: 0.14rem;
+	margin-top: 0.2rem;
+	line-height: 0.18rem;
+	width: 50%;
+}
+
+.DesignScreen  .create {
+	background-color: rgb(255, 192, 8);
+	font-size: 0.14rem;
+	padding: 0.12rem 0.24rem;
+	border-radius: 0.14rem;
+	cursor: pointer;
+}
+
+.DesignScreen  .inputName {
+	width: 1rem;
+	border-bottom: 1px solid #444;
+	padding-bottom: 0.1rem;
+}
+
+.DesignScreen .basket-top-content {
+	padding: 0.1rem 0.3rem 0.1rem .9rem !important;
+}
+
+.DesignScreen .basket-btn {
+	background-color: rgb(67, 117, 123);
+	color: #fff;
+	padding: 0.13rem 0.2rem;
+	font-weight: 600;
+	margin: 0.1rem 0;
+	border-radius: 0.12rem;
+	cursor: pointer;
+}
+
+
+
+.DesignScreen .activP {
+	background-color: #367fa9 !important;
+	color: #fff !important;
+}
+
+.DesignScreen .last,
+.DesignScreen .first,
+.DesignScreen .next,
+.DesignScreen .prv {
+	color: #000 !important;
+}
+
+.DesignScreen .prv,
+.DesignScreen .first,
+.DesignScreen .last {
+	display: none;
+}
+
+.DesignScreen .pagingUl li {
+	margin: 0 0.1rem;
+	border-radius: 50% !important;
+}
+
+
+
+.DesignScreen li {
+	list-style: none;
+}
+
+.DesignScreen div.main-wrap {
+	position: relative;
+	margin: 0 auto;
+}
+
+.DesignScreen div.main-wrap div.paging-content {
+	width: 100%;
+	height: auto;
+}
+
+.DesignScreen div.main-wrap div.paging-content ul.pageItem {
+	width: 100%;
+	display: none;
+}
+
+.DesignScreen div.main-wrap div.paging-content ul.pageItem.active {
+	display: block;
+}
+
+.DesignScreen div.main-wrap div.paging-content ul.pageItem li {
+	width: 100%;
+}
+
+.DesignScreen div.main-wrap div.paging {
+	position: absolute;
+	bottom: -40px;
+	/* left: 30%; */
+	height: 40px;
+	width: 600px;
+}
+
+.DesignScreen div.main-wrap div.paging>span {
+	display: block;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	float: left;
+}
+.DesignScreen .result-text {
+	 color: #000000;
+	 margin-right: 0.2rem;
+}
+
+.DesignScreen div.main-wrap div.paging div.next, .DesignScreen div.main-wrap div.paging div.prev {
+	margin-left: 10px;
+	background: url(../img/index/right.png) center no-repeat;
+	background-size: 12px 20px;
+}
+
+.DesignScreen div.next, .DesignScreen div.prev {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	z-index: 9;
+}
+.DesignScreen div.prev {
+	transform: rotate(180deg);
+	margin-right: 0.3rem;
+}
+
+.DesignScreen div.main-wrap div.paging div.page-btn {
+	width: 200px !important;
+	height: 60px;
+	margin-top: 16px;
+	margin-left: -20px;
+	overflow: hidden;
+	float: left;
+	position: relative;
+}
+
+.DesignScreen div.main-wrap div.paging div.page-btn ul {
+	width: 2000px;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.DesignScreen div.main-wrap div.paging div.page-btn ul li {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	width: 40px;
+	text-align: center;
+	font-size: 20px;
+	color: #666;
+	cursor: pointer;
+}
+
+.DesignScreen div.main-wrap div.paging div.page-btn ul li.active {
+	color: #fff;
+	background-color: rgb(67, 117, 123);
+	border-radius: 50%;
+}
+.DesignScreen .orderID {
+	width: 80px;
+}
+.DesignScreen .name-input {
+	width: 1rem;
+}
+.DesignScreen .edit-btn {
+	background-color: #FFC008;
+	color: #FFFFFF;
+	padding: 0.05rem 0.1rem;
+	font-size: 0.12rem;
+	border-radius: 0.05rem;
+	cursor: pointer;
+	text-align: center;
+}
+.DesignScreen .goods-img-l {
+	width: 1rem;
+	height: 1rem;
+	margin-right: 0.3rem;
+	object-fit: contain;
+	/* object-fit: cover; */
+}
+.DesignScreen .goods-img-m {
+	width: 3rem;height: 1.5rem !important;
+	object-fit: cover;
+	margin-left: 0.8rem;
+}
+.DesignScreen .basket-goods-desc {
+	margin-right: 0.5rem;
+}
+.DesignScreen .basket-content-item > .flex-between > div:nth-of-type(1) {
+	flex: 0.5 !important;
+}
+.DesignScreen .basket-content-item > .flex-between > div:nth-of-type(2) {
+	flex: 2 !important;
+}
+.DesignScreen .basket-content-item>.flex-between.rowCenter>div.flex {
+	flex: 2 !important;
+}
+
+
+.DesignScreen .basket-content-item > .flex-between.rowCenter {
+	align-items: flex-start;flex: 1;align-items: center;
+}
+.DesignScreen .basket-btn.PayOrder {
+	width: 1rem;
+	background-color: rgb(255,192,8);
+}
+
+@media screen and (max-width:970px) {
+	.DesignScreen .center {
+		flex-direction: column;
 	}
-	.design .uls{
-		flex-wrap: wrap;
+
+	.DesignScreen .left,
+	.DesignScreen .right {
 		width: 100%;
-		margin: 0.6rem auto 0 auto;
-		padding-left: 0.4rem;
 	}
-	.design .btn{
+
+	.DesignScreen .right .title {
 		display: none;
 	}
-	.design .cont{
-		width: 90%;
+
+	.DesignScreen .basket-formTwo-name {
+		justify-content: space-between !important;
+		padding: 0 0.6rem 0 27%;
 	}
-	.design .name{
-		width: 80%;
-	}
-}
-@media screen and (max-width:640px){
-	.design .ulBox{
-		text-align: center;
-		width: 48%;
-		margin: 0 1.5% 0.5rem 0;
-	}
-	.design .uls{
-		flex-wrap: wrap;
-		width: 100%;
-		margin: 0.7rem auto 0 auto;
-		padding-left: 0.2rem;
-	}
-	.design .cont{
-		font-size: 0.2rem;
-		line-height: 0.22axrem;
-	}
-	.design .name{
-		font-size: 0.5rem;
+	.DesignScreen .edit-btn {
+		margin-top: 0.1rem;
 	}
 }
-@media screen and (max-width:540px){
-	.design .title{
+
+@media screen and (max-width:690px) {
+
+	.DesignScreen .left .title,
+	.DesignScreen .name {
+		font-size: 0.4rem !important;
+		margin: 0.4rem 0;
+	}
+
+	.DesignScreen .name {
+		margin: 0.5rem 0;
+	}
+
+	.DesignScreen .welcome {
 		font-size: 0.6rem;
-		width: 80%;
-		line-height: 0.75rem;
 	}
-	.design .cont{
-		font-size: 0.28rem;
-		line-height: 0.33rem;
+
+	.DesignScreen .detail {
+		font-size: 0.25rem !important;
+		width: 90%;
+		line-height: 0.34rem !important;
 	}
-	.design .car{
-		height: 6rem;
-	}
-	.design .name{
-		font-size: 0.4rem;
-		line-height: 0.6rem;
-		width: 70%;
-		padding-top: 34%;
-	}
-	.design .ulBox{
-		text-align: center;
-		width: 80%;
-		margin-bottom: 0.7rem;
-	}
-	.design .uls{
+
+	.DesignScreen .create {
+		font-size: 0.2rem;
 		width: 100%;
-		margin: 0.6rem auto 0 auto;
-		padding: 0;
+		text-align: center;
+		padding: 0.15rem 0;
+		border-radius: 0.18rem;
+		margin-bottom: 0.2rem;
+	}
+
+	.DesignScreen .left {
+		font-size: 0.22rem !important;
+		line-height: 0.36rem !important;
+	}
+
+	.DesignScreen .center,
+	.DesignScreen .createUl {
+		flex-direction: column;
+	}
+
+	.DesignScreen .left {
+		width: 100%;
+		font-size: 0.16rem;
+		line-height: 0.3rem;
+	}
+
+	.DesignScreen .title,
+	.DesignScreen .name {
+		font-size: 0.28rem;
+	}
+
+	.DesignScreen .topName {
+		font-size: 0.44rem;
+		padding: 0 0.3rem;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.DesignScreen .detail {
+		font-size: 0.2rem;
+		margin: 0.5rem 0.2rem;
+		line-height: 0.26rem;
+	}
+
+	.DesignScreen .basket-goods-img {
+		margin-right: 0.3rem !important;
+		width: 1.5rem;height: 1.5rem;
+	}
+
+	.DesignScreen .basket-formTwo-content {
+		padding-right: 0.7rem !important;
+	}
+
+	.DesignScreen div.main-wrap div.paging {
+		position: relative;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		height: auto;
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
 		align-items: center;
 	}
-	.design .money{
-		font-size: 0.3rem;
-		margin: 0.08rem 0 0.8rem 0;
+
+
+
+	.DesignScreen .basket-btn {
+		flex-shrink: 0;
+	
 	}
-	.design .design .btnRight{
-		padding: 0.2rem 0;
-		border-radius: 0.3rem;
-		font-size: 0.4rem;
-		font-weight: 600;
+	.DesignScreen .result-text {
+		font-size: 0.25rem;
+		margin-bottom: 0.2rem;
 	}
-	.design .btnImg{
-		width: 0.55rem;
-		height: 0.5rem;
+	.DesignScreen .edit-btn {
+		margin-top: 0.1rem;
+	}
+}
+.DesignScreen .orderDetail {
+	display:  none;
+}
+.DesignScreen tr td,.DesignScreen tr th{
+	padding: 0.1rem .02rem;
+}
+
+
+.DesignScreen th {
+	font-weight: normal;
+}
+.DesignScreen table {
+	width: 100%;
+	color: black;
+	border-collapse: collapse;
+	border: 2px solid rgb(67,117,123);
+	font-size: 0.16rem;
+	text-align: left;
+	margin-top: .26rem;
+	box-sizing: border-box;
+}
+.DesignScreen td {
+	font-size: 0.12rem;
+}
+@media screen and (max-width:900px){
+	.DesignScreen .orderDetail {
+		display:  block;
+	}
+	.DesignScreen.right {
+		width: 100%;
+	}
+	.DesignScreen table{
+		display: none;
+	}
+	.basket-form{
+		display: none;
+	}
+	.basket-formTwo {
+		display: block;
+	}
+	.basket-contents{
+		width: 100%;
+		margin-left: 0.4rem;
+		margin-right: 0.4rem;
+		margin-bottom: -1.2rem;
 	}
 	
 }

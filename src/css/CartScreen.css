@@ -1,0 +1,461 @@
+.CartScreen select {
+	background-color: rgb(232, 244, 244);
+}
+
+.CartScreen .title {
+	color: rgb(67, 117, 123);
+	font-size: 0.33rem;
+	margin: 0.3rem 0 0.2rem 0;
+	font-weight: 600;
+}
+
+.CartScreen .cont {
+	color: #000;
+	width: 50%;
+	font-size: 0.14rem;
+	line-height: 0.2rem;
+}
+
+.CartScreen .btn {
+	background-color: rgb(255, 192, 8);
+	padding: 0.12rem 0.34rem;
+	font-size: 0.15rem;
+	border-radius: 0.13rem;
+	cursor: pointer;
+}
+
+.CartScreen .secction {
+	padding-bottom: 0.7rem;
+}
+
+.CartScreen .content {
+	display: flex;
+	color: rgb(67, 117, 123);
+	padding: 0.7rem 0;
+}
+.CartScreen .secction {
+    color: rgb(67,117,123);
+    padding: 1.5rem 15% 1rem 15%;
+}
+.CartScreen .left {
+	flex: 2;
+	/* font-style: oblique; */
+}
+.CartScreen .cont {
+    background-color: rgb(232,244,244);
+    width: 100%;
+}
+.CartScreen .right,
+.CartScreen .boxSelect,
+.CartScreen .back,
+.CartScreen .add,
+.CartScreen .lis {
+	flex: 1;
+	/* font-style: oblique; */
+}
+
+.CartScreen .left,
+.CartScreen .minLeft {
+	margin-right: 0.3rem;
+}
+
+.CartScreen .tips {
+	color: #000;
+	margin: 0.3rem 0 0.06rem 0;
+	font-size: 0.16rem;
+}
+
+.CartScreen .add {
+	background-color: rgb(253, 191, 8);
+	color: #fff;
+	font-weight: 600;
+	text-align: center;
+	font-size: 0.2rem;
+	padding: 0.13rem 0;
+	border-radius: 0.14rem;
+	cursor: pointer;
+}
+
+.CartScreen .backts {
+	background-color: rgb(67, 117, 123);
+	color: #fff;
+	font-weight: 600;
+	text-align: center;
+	font-size: 0.2rem;
+	padding: 0.13rem 0;
+	border-radius: 0.14rem;
+	cursor: pointer;
+}
+
+.CartScreen .right_title {
+	font-size: 0.34rem;
+	font-weight: 600;
+	margin-bottom: 0.3rem;
+}
+
+.CartScreen .scent {
+	font-size: 0.16rem;
+	color: #000;
+	font-weight: 600;
+	line-height: 0.2rem;
+	margin-bottom: 0.2rem;
+}
+
+.CartScreen .subtotal {
+	font-size: 0.16rem;
+	color: #000;
+	font-weight: 600;
+	border-bottom: 2px solid #555;
+	padding-bottom: 0.2rem;
+	margin-bottom: 0.2rem;
+	line-height: 0.22rem;
+}
+
+.CartScreen .total,
+.CartScreen .vat {
+	font-size: 0.16rem;
+	color: #000;
+	line-height: 0.18rem;
+}
+
+.CartScreen .money {
+	font-weight: 600;
+	color: rgb(67, 117, 123);
+	font-size: 0.2rem;
+}
+
+.CartScreen .review {
+	color: #fff;
+	background-color: rgb(255, 192, 8);
+	text-align: center;
+	font-size: 0.2rem;
+	margin: 0.2rem 0;
+	padding: 0.13rem 0;
+	border-radius: 0.14rem;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.CartScreen .save {
+	color: #fff;
+	text-align: center;
+	background-color: rgb(67, 117, 123);
+	padding: 0.13rem 0;
+	font-size: 0.2rem;
+	font-weight: 600;
+	border-radius: 0.14rem;
+	cursor: pointer;
+}
+
+.CartScreen .selectName {
+	color: #000;
+	font-size: 0.16rem;
+	font-weight: 600;
+	margin-right: 0.1rem;
+}
+
+.CartScreen .downPutOne {
+	border-bottom: 1px solid #000;
+	flex: 1;
+	/* font-style: oblique; */
+	color: #999;
+	margin: 0.06rem 0;
+}
+
+.CartScreen .left_title {
+	font-size: 0.24rem;
+	font-weight: 600;
+	margin-bottom: 0.3rem;
+}
+
+.CartScreen .lis_title {
+	color: #000;
+	border-bottom: 1px solid #000;
+	padding-bottom: 0.08rem;
+	font-weight: bold;
+}
+
+.CartScreen .lis_title div {
+	margin-right: 16.5%;
+}
+
+.CartScreen .list_cselect {
+	/* font-style: oblique; */
+	color: #666;
+	border-bottom: 1px solid #000;
+	width: 1rem;
+	font-size: 0.16rem;
+}
+
+.CartScreen .colorBox {
+	width: 0.18rem;
+	height: 0.18rem;
+	background-color: rgb(105, 200, 208);
+	border-radius: 0.04rem;
+	margin-right: 0.08rem;
+}
+
+.CartScreen .iptQuantity {
+	background-color: rgb(232, 244, 244);
+	border-bottom: 1px solid #000;
+	/* font-style: oblique; */
+	font-size: 0.16rem;
+	width: 1rem;
+}
+
+.CartScreen .selectLi {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0.2rem 0;
+	/* margin: 0.2rem 10% 0.2rem 0; */
+	font-size: 0.16rem;
+	color: #000;
+	position: relative;
+}
+
+.CartScreen .selectLi .downPutOne {
+	font-size: 0.16rem;
+}
+
+.CartScreen .active {
+	color: rgb(255, 192, 8);
+}
+
+.CartScreen .delete {
+	color: #fff;
+	background-color: rgb(67, 117, 123);
+	font-size: 0.2rem;
+	font-weight: 600;
+	padding: 0.06rem 0.1rem;
+	border-radius: 0.08rem;
+	cursor: pointer;
+}
+
+.CartScreen .scent-select {
+	width: 100%;
+	margin-right: 0.4rem;
+	cursor: pointer;
+	flex-wrap: nowrap;
+}
+
+.CartScreen .color-select {
+	cursor: pointer;
+	flex-wrap: nowrap;
+	margin-right: 0.4rem;
+	/* width: 180%; */
+}
+
+.CartScreen .deleteBox {
+	margin-left: 0.3rem;
+}
+.CartScreen .limit-tip {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	bottom: -0.25rem;
+	color: red;
+	font-size: 0.12rem;
+	transform: translate(-50%, 0);
+	display: none;
+}
+.CartScreen .layui-form-select .layui-input {
+	background-color: transparent;
+}
+.CartScreen .right {
+    flex: 1;
+}
+.CartScreen .left {
+    flex: 1;
+    margin-right: 10%;
+}
+.CartScreen .jixu {
+    background-color: rgb(67,117,123);
+    color: #fff;
+    text-align: center;
+    margin: 0.34rem 0 0.2rem 0;
+    padding: 0.1rem 0;
+    border-radius: 0.12rem;
+    font-size: 0.19rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1070px) {
+	.CartScreen .content {
+		flex-direction: column;
+	}
+
+	.CartScreen .selectLi {
+		margin: 0.2rem 12% 0.2rem 0;
+	}
+
+	.CartScreen .right {
+		margin-top: 0.5rem;
+	}
+
+	.CartScreen .cont {
+		/* width: 90%; */
+	}
+
+	.CartScreen .secction {
+		/* flex-direction: column; */
+		/* align-items: flex-start; */
+	}
+
+	.CartScreen .btn {
+		margin: 0.2rem auto 0 auto;
+		font-size: 0.2rem;
+		font-weight: 600;
+		width: 100%;
+		text-align: center;
+		padding: 0.18rem 0;
+		border-radius: 0.2rem;
+	}
+}
+
+@media screen and (max-width:870px) {
+	.CartScreen .selectLi {
+		margin: 0.2rem 8% 0.2rem 0;
+	}
+}
+
+@media screen and (max-width:720px) {
+	.CartScreen .lis_title div {
+		margin-right: 12%;
+	}
+	.CartScreen .list_content {
+		flex-direction: column;
+	}
+
+	.CartScreen .deleteBox {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+	}
+	.CartScreen .scent-select {
+		margin-right: 0.1rem;
+	}
+	
+	.CartScreen .color-select {
+		margin-right: 0.1rem;
+	}
+}
+
+@media screen and (max-width:640px) {
+	.CartScreen .lis_title div {
+		margin-right: 12%;
+	}
+
+	.CartScreen .lis {
+		flex-direction: column;
+		margin: 0;
+	}
+
+	.CartScreen .left,
+	.CartScreen .right {
+		flex: 1;
+	}
+
+	.CartScreen .minLeft,
+	.CartScreen .minRight {
+		width: 100%;
+		margin: 0.16rem 0;
+	}
+
+	.CartScreen .boxSelect {
+		width: 100%;
+	}
+
+	.CartScreen .minLeft {
+		margin-right: 0;
+	}
+
+	.CartScreen .toGo {
+		margin-top: 0.2rem;
+	}
+}
+
+@media screen and (max-width:560px) {
+	.CartScreen .lis_title div {
+		margin-right: 12%;
+	}
+	.CartScreen .title {
+		font-size: 0.5rem;
+		line-height: 0.7rem;
+		width: 70%;
+	}
+
+	.CartScreen .cont {
+		font-size: 0.24rem;
+		line-height: 0.28rem;
+	}
+
+	.CartScreen .left_title {
+		font-size: 0.3rem;
+		line-height: 0.44rem;
+	}
+
+	.CartScreen .minLeft,
+	.CartScreen .minRight {
+		font-size: 0.2rem;
+	}
+
+	.CartScreen .boxs,
+	.CartScreen .dui {
+		width: 0.48rem;
+		height: 0.48rem;
+		border-radius: 0.06rem;
+		background-color: rgb(105, 200, 208);
+		border: 1px solid #000;
+		margin-right: 0.2rem;
+		cursor: pointer;
+	}
+
+	.CartScreen .toGo {
+		font-size: 0.2rem;
+	}
+
+	.CartScreen .btnUl {
+		flex-direction: column;
+	}
+
+	.CartScreen .back,
+	.CartScreen .add {
+		width: 100%;
+		margin: 0.2rem 0;
+		padding: 0.2rem 0;
+		font-size: 0.24rem;
+		font-weight: 600;
+		border-radius: 0.24rem;
+	}
+
+	.CartScreen .scent,
+	.CartScreen .subtotal,
+	.CartScreen .total,
+	.CartScreen .vat {
+		font-size: 0.2rem;
+		line-height: 0.24rem;
+	}
+
+	.CartScreen .money {
+		font-size: 0.3rem;
+	}
+
+	.CartScreen .review,
+	.CartScreen .save {
+		font-size: 0.25rem;
+		padding: 0.2rem 0;
+		border-radius: 0.2rem;
+	}
+
+	.CartScreen .scent-select {
+		margin-right: 0.1rem;
+	}
+
+	.CartScreen .color-select {
+		margin-right: 0.1rem;
+	}
+	
+}

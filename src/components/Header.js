@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { logout } from '../actions/userActions'
-
+import {getCart} from '../actions/cartActions'
 function Header() {
 
-    const userLogin = useSelector(state => state.userLogin)
+	const userLogin = useSelector(state => state.userLogin)
+	const cartItems = useSelector(state => state.cart.cartItems)
     const { userInfo } = userLogin
 
     const dispatch = useDispatch()
@@ -13,7 +14,13 @@ function Header() {
     const logoutHandler = (e) => {
 		e.preventDefault();
         dispatch(logout())
-    }
+	}
+	
+	useEffect(()=> {
+		console.log(cartItems,'cart.cartItems.cartItems');
+		// dispatch(getCart());
+		console.log(cartItems,'cart.cartItems.cartItems');
+	},[]);
 	console.log(userInfo,999);
     return (
         <header>
@@ -101,10 +108,10 @@ function Header() {
 				</div>
 			</div>
 			<div className="flex-center">
-				<a href="###" className="relative">
+				<Link to="/cart" className="relative">
 					<img src="./images/index/box.png" className="box" />
-					<div className="round-num">3</div>
-				</a>
+					<div className="round-num">{cartItems || 0}</div>
+				</Link>
 				<button className="all">
 					<img src="./images/index/menu.png" />
 				</button>

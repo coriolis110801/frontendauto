@@ -18,7 +18,7 @@ function LoginScreen({ location, history }) {
 	const dispatch = useDispatch()
 
 	const redirect = location.search ? location.search.split('=')[1] : '/'
-
+	console.log(redirect, 5555);
 	const userLogin = useSelector(state => state.userLogin)
 	const { loading, userInfo } = userLogin
 	const messageInfo = useSelector(state => state.message)
@@ -27,7 +27,7 @@ function LoginScreen({ location, history }) {
 	const userInfo2 = userRegister.userInfo;
 	useEffect(() => {
 		if (userInfo || userInfo2) {
-			history.push(redirect)
+			history.push(redirect==='/cart'?'/selAddress':redirect);
 		}
 	}, [history, userInfo, redirect])
 
@@ -109,7 +109,8 @@ function LoginScreen({ location, history }) {
 								<div className="here">Click here</div>
 							</div>
 						</div>
-						<div className="left">
+						{
+							redirect!=='/cart' ?<div className="left">
 							<div className="name">Create an Account</div>
 							<div className="cont contTwo">To receive exclusive benefite</div>
 							<div className="uil">
@@ -127,7 +128,21 @@ function LoginScreen({ location, history }) {
 							</div>
 							<div className="loginBtn" onClick={submitRegHandler}>Register</div>
 						</div>
-
+						:
+						<div className="right">
+							<div className="name nameTwo">Purchase as a Guest</div>
+							<div className="place">
+								To purchase as a guest, you just need to provide us with the essential details to place your order.
+							</div>
+							<div className="place">
+								To save your details for future purchases, please sign up to AutoSqueak and create your account.
+							</div>
+							<div className="register" style={{marginTop: '0.6rem'}}>
+							<Link to='/selAddress' className="register">Continue as a Guest</Link>
+							</div>
+						</div>
+						}
+						
 					</div>
 					<div className="tips maxWidth">
 						Sorry Captcha is incorrect Or Invalid password format

@@ -1,0 +1,161 @@
+.design .padLR{
+    padding: 0 0.5rem;
+}
+
+.design .title{
+	color: rgb(67,117,123);
+	font-size: 0.33rem;
+	margin: 0.3rem 0 0.2rem 0;
+	font-weight: 600;
+}
+.design .cont{
+	color: #000;
+	width: 50%;
+	font-size: 0.14rem;
+	line-height: 0.2rem;
+}
+.design .btn{
+	background-color: rgb(255,192,8);
+	padding: 0.12rem 0.34rem;
+	font-size: 0.15rem;
+	border-radius: 0.13rem;
+	cursor: pointer;
+}
+.design .secction{
+	padding-bottom: 0.7rem;
+}
+.design .car{
+	width: 100%;
+	height: 4.2rem;
+	background: url(../img/index/carui2.png) no-repeat;
+	background-size: cover;
+}
+.design .name{
+	font-size: 0.6rem;
+	padding-top: 10%;
+	padding-left: 0.5rem;
+	font-weight: 600;
+	width: 54%;
+	line-height: 0.7rem;
+}
+.design .uls{
+	flex-wrap: wrap;
+	width: 100%;
+	padding-left: 0.6rem;
+	margin: 0.8rem 0 0.4rem 0;
+}
+.design .ulBox{
+	text-align: center;
+	width: 20%;
+	margin: 0 5% 0.5rem 0;
+}
+.design .money{
+	color: #747A81;
+	font-size: 0.13rem;
+	font-weight: 600;
+	margin: 0.08rem 0 0.1rem 0;
+	display: flex;
+	flex-direction: row-reverse;
+}
+.design .btnImg{
+	width: 0.2rem;
+	height: 0.16rem;
+	margin-right: 0.05rem;
+}
+.design .btnRight{
+	flex: 1;
+	padding: 0.11rem 0;
+	border-radius: 0.14rem;
+	background-color: rgb(255,192,8);
+	cursor: pointer;
+}
+@media screen and (max-width:935px){
+	.design .ulBox{
+		text-align: center;
+		width: 30%;
+		margin: 0 2% 0.5rem 0;
+	}
+	.design .uls{
+		flex-wrap: wrap;
+		width: 100%;
+		margin: 0.6rem auto 0 auto;
+		padding-left: 0.4rem;
+	}
+	.design .btn{
+		display: none;
+	}
+	.design .cont{
+		width: 90%;
+	}
+	.design .name{
+		width: 80%;
+	}
+}
+@media screen and (max-width:640px){
+	.design .ulBox{
+		text-align: center;
+		width: 48%;
+		margin: 0 1.5% 0.5rem 0;
+	}
+	.design .uls{
+		flex-wrap: wrap;
+		width: 100%;
+		margin: 0.7rem auto 0 auto;
+		padding-left: 0.2rem;
+	}
+	.design .cont{
+		font-size: 0.2rem;
+		line-height: 0.22axrem;
+	}
+	.design .name{
+		font-size: 0.5rem;
+	}
+}
+@media screen and (max-width:540px){
+	.design .title{
+		font-size: 0.6rem;
+		width: 80%;
+		line-height: 0.75rem;
+	}
+	.design .cont{
+		font-size: 0.28rem;
+		line-height: 0.33rem;
+	}
+	.design .car{
+		height: 6rem;
+	}
+	.design .name{
+		font-size: 0.4rem;
+		line-height: 0.6rem;
+		width: 70%;
+		padding-top: 34%;
+	}
+	.design .ulBox{
+		text-align: center;
+		width: 80%;
+		margin-bottom: 0.7rem;
+	}
+	.design .uls{
+		width: 100%;
+		margin: 0.6rem auto 0 auto;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.design .money{
+		font-size: 0.3rem;
+		margin: 0.08rem 0 0.8rem 0;
+	}
+	.design .design .btnRight{
+		padding: 0.2rem 0;
+		border-radius: 0.3rem;
+		font-size: 0.4rem;
+		font-weight: 600;
+	}
+	.design .btnImg{
+		width: 0.55rem;
+		height: 0.5rem;
+	}
+	
+}

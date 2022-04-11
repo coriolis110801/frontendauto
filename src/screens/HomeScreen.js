@@ -6,6 +6,7 @@ import SwiperCore, { Navigation, Autoplay } from 'swiper';
 import { useDispatch, useSelector } from 'react-redux'
 import LoadSpinner from '../components/LoadSpinner'
 import Message from '../components/Message'
+import SelectItem from '../components/SelectItem'
 import '../css/HomeScreen.css';
 import 'swiper/swiper-bundle.min.css';
 import {listProducts} from '../actions/productActions'
@@ -15,8 +16,10 @@ function HomeScreen({ history }) {
     const dispatch = useDispatch()
     const productList = useSelector(state => state.productList)
     const messageInfo = useSelector(state => state.message)
+    
     const {  loading, products, products1 } = productList
-
+    const [nowItem, setNowItem] = useState(null);
+    const [show, setShow] = useState(false);
     let keyword = history.location.search
 
     useEffect(() => {
@@ -26,9 +29,19 @@ function HomeScreen({ history }) {
     function changShow() {
 
     }
-
+    const selectAddCart = (item, index) => {
+        return () => {
+            setNowItem(item);
+            setShow(true);
+        }
+    }
+    const noFun = () => {
+        setNowItem({});
+        setShow(false);
+    }
     return (
         <div className="home">
+            {show?<SelectItem item={nowItem} noFun={noFun}  /> : ''}
 
             {messageInfo.msg ? <Message variant={messageInfo.variant}>{messageInfo.msg}</Message>:''}
             {loading ? <div className="fullcreen"><LoadSpinner /></div>
@@ -67,7 +80,7 @@ function HomeScreen({ history }) {
                                                             </div>
                                                             <div className="flex-center">
                                                                 <Link to={'/product/'+item.id} className="btnLeft flex">View Details</Link>
-                                                                <div className="flex btnRight">
+                                                                <div className="flex btnRight" onClick={selectAddCart(item)}>
                                                                     <img src="./images/index/box2.png" className="btnImg" />
                                                                     <div>+</div>
                                                                 </div>

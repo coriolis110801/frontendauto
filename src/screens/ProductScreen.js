@@ -58,7 +58,7 @@ function ProductScreen({ match }) {
                                                 <div className="swiper-wrapper">
                                                 <div className="swiper-slide">
                                                 {
-                                                        product.imgs && product.imgs.map(item => {
+                                                        product&&product.imgs && product.imgs.map(item => {
                                                             return  <div className="small-img"><img onClick={handleImg}  src={item} /></div>
                                                                 
                                                         })
@@ -99,15 +99,15 @@ function ProductScreen({ match }) {
                                         <div className="goods-desc">
                                             <div className="sku-here" >Details:</div>
                                             <div>
-                                               {product.info&&product.info.info}
+                                               {product&&product.info&&product.info.info}
 							                </div>
                                         </div>
                                         <div className="layui-form lis">
                                             <select className="downPutOne lis">
-                                                <option value="volvo">Please Choose</option>
+                                                <option value="">Please Choose</option>
                                                 {
-                                                    product.colors&&product.colors.map((item,index) => {
-                                                        <option value={item}>{item}</option>
+                                                    product&&product.colors&&product.colors.map((item,index) => {
+                                                        return <option value={item}>{item}</option>
                                                     })
                                                 }
                                             </select>
@@ -115,8 +115,12 @@ function ProductScreen({ match }) {
                                         </div>
                                         <div className="layui-form lis">
                                             <select className="downPutOne lis">
-                                                <option value="volvo">Please Choose</option>
-                                                
+                                                <option value="">Please Choose</option>
+                                                {
+                                                    product&&product.combos&&product.combos.map((item,index) => {
+                                                        return <option value={item}>{item}</option>
+                                                    })
+                                                }
                                             </select>
 
                                         </div>
@@ -132,7 +136,7 @@ function ProductScreen({ match }) {
                                             <div>Not in stock</div>
                                         </div>
                                         {
-                                            product.info?
+                                            product&&product.info?
                                             <div className="flex-center goods-price">
                                                 <div className="del-price">£{product.info.price}</div>
                                                 <div className="now-price">£{product.info.price * product.info.discount}</div>

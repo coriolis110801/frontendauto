@@ -9,7 +9,11 @@ import ContactScreen from './screens/ContactScreen'
 import DesignScreen from './screens/DesignScreen'
 import ProductScreen from './screens/ProductScreen'
 import AccountScreen from './screens/AccountScreen'
-
+import CartScreen from './screens/CartScreen'
+import ShippingScreen from './screens/ShippingScreen'
+import SelAddressScreen from './screens/SelAddressScreen'
+// SelAddress
+// /shipping
 
 function App() {
   return (
@@ -24,6 +28,10 @@ function App() {
           <Route path='/design' component={DesignScreen} />
           <Route path='/product/:id' component={ProductScreen} />
           <Route path='/account' component={AccountScreen} />
+          <Route path='/cart' component={CartScreen} />
+          <Route path='/shipping' component={ShippingScreen} />
+          <Route path='/selAddress' component={SelAddressScreen} />
+          
           {/* <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
           <Route path='/shipping' component={ShippingScreen} />

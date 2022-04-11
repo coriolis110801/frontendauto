@@ -57,15 +57,16 @@ export const productListReducer = (state = { products: [], products1: [] }, acti
 
 
 export const productDetailsReducer = (state = { product: { reviews: [] } }, action) => {
+    console.log(action);
     switch (action.type) {
         case PRODUCT_DETAILS_REQUEST:
             return { loading: true, ...state }
 
         case PRODUCT_DETAILS_SUCCESS:
-            return { loading: false }
+            return { ...state,loading: false, product: action.payload }
 
         case PRODUCT_DETAILS_FAIL:
-            return { loading: false }
+            return { ...state,loading: false }
 
         default:
             return state

@@ -3,6 +3,8 @@ import '../css/AccountScreen.css'
 import EditPwdScreen from './EditPwdScreen'
 import AddressScreen from './AddressScreen';
 import OrderScreen from './OrderScreen';
+import DesignScreen from './DesignScreen';
+
 function Account({ history }) {
 	const [menu, setMenu] = useState('1-2');
 	const handleMenu = (val) => {
@@ -32,6 +34,9 @@ function Account({ history }) {
 					}
 					{
 						menu === '2-0' ? <OrderScreen />:''
+					}
+					{
+						menu === '3-0' ? <DesignScreen /> :''
 					}
 					
 					

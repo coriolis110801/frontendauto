@@ -9,7 +9,9 @@
     margin: 0.5rem 0.2rem;
     line-height: 0.26rem;
 }
-
+.AddressScreen .mask {
+	display: block;
+}
 .AddressScreen .err {
     padding-right: 0.2rem;
     margin-bottom: -0.2rem;
@@ -90,6 +92,28 @@
 	margin: 0.2rem 0 0.1rem 0;
 	padding-bottom: 0.1rem;
 	border-bottom: 2px solid #555;
+}
+/* .selAddress.AddressScreen .lis_item {
+	margin-right: 48%;
+} */
+.selAddress.AddressScreen .lisOne {
+	flex-direction: column;
+	justify-content: flex-start;
+	flex: 1;
+	align-items: flex-start;
+}
+.selAddress.AddressScreen .inAddress {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: flex-start;
+	
+	padding: 0 0.5rem;
+}
+.selAddress.AddressScreen .SelTitle {
+	font-size: 0.36rem;
+	font-weight: 600;
+	padding: 0 0 .3rem 0;
 }
 .AddressScreen .entry{
 	background-color: rgb(232,244,244);
@@ -183,6 +207,16 @@
 	padding: 0.2rem;
 	position: relative;
 }
+.selAddress.AddressScreen .boxUi_item {
+	padding:  0;
+	margin: .2rem;
+	border: none;
+	/* line-height: .2rem; */
+}
+.selAddress.AddressScreen .select_item {
+	margin: 0;
+	line-height: .2rem;
+}
 .AddressScreen .add{
 	width: 30%;
 	height: 2.4rem;
@@ -208,6 +242,10 @@
 	color: rgb(67,117,123);
 	font-weight: 600;
 	line-height: 0.3rem;
+}
+.selAddress.AddressScreen .boxName {
+	color: black;
+	
 }
 .AddressScreen .select_item{
 	line-height: 0.15rem;
@@ -251,7 +289,7 @@
 	flex-direction: row-reverse;
 }
 .AddressScreen .addressBox{
-	display: none;
+	/* display: none; */
 	padding: 0.2rem 0;
 	background-color: rgb(232,244,244);
 	position: fixed;

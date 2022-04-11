@@ -39,7 +39,7 @@ export const listProducts = (keyword = '', flag) => async (dispatch) => {
         let url = baseAPIUrl + 'product/store';
         
         if(keyword) url = baseAPIUrl + 'product/search?keyword='+keyword;
-        if(!flag) url = 'http://127.0.0.1:8000/' + 'api/homepage';
+        if(!flag) url = baseAPIUrl + 'homepage';
         const { data } = await axios.get(url)
 
         dispatch({

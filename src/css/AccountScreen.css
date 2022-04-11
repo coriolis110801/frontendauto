@@ -10,7 +10,7 @@
 	font-weight: 600;
 	line-height: 0.24rem;
 	font-size: 0.14rem;
-	flex: 0 0 20%;
+	flex: 0 0 28%;
 }
 .accountScreen .left div{
 	cursor: pointer;
@@ -32,10 +32,18 @@
 	align-items: flex-start;
 }
 
-@media screen and (max-width:690px){
-	.AddressScreen .left{
+@media screen and (max-width:900px){
+	.accountScreen .flex-between {
+		flex-direction: column;
+	}
+	.accountScreen .left{
 		width: 100%;
 		font-size: 0.16rem;
 		line-height: 0.3rem;
+		flex: 0 0 100%;
+	}
+	.accountScreen .right {
+		width: 100%;
+		flex: 0 0 100%;
 	}
 }
