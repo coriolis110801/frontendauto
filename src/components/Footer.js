@@ -1,7 +1,8 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
-function Footer() {
+function Footer(props) {
+    console.log('footer', props)
     return (
         <footer>
             <div className="bottom">

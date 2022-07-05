@@ -12,13 +12,18 @@ import AccountScreen from './screens/AccountScreen'
 import CartScreen from './screens/CartScreen'
 import ShippingScreen from './screens/ShippingScreen'
 import SelAddressScreen from './screens/SelAddressScreen'
-// SelAddress
-// /shipping
-
+import OrderScreen from './screens/OrderScreen'
+import OrderDetailScreen from './screens/OrderDetailScreen'
+import OrderTouristScreen from './screens/OrderTouristScreen'
+import ShapesScreen from './screens/ShapesScreen'
+import FreshenerScreen from './screens/FreshenerScreen'
+import DesignerScreen from './screens/DesignerScreen'
+import { useDispatch, useSelector } from 'react-redux'
 function App() {
+  const headFootInfo = useSelector(state => state.headFootInfo)
   return (
     <Router>
-      <Header />
+      {headFootInfo.show &&  <Header />}
       <main >
         {/* <Container> */}
           <Route path='/' component={HomeScreen} exact />
@@ -29,9 +34,16 @@ function App() {
           <Route path='/product/:id' component={ProductScreen} />
           <Route path='/account' component={AccountScreen} />
           <Route path='/cart' component={CartScreen} />
-          <Route path='/shipping' component={ShippingScreen} />
+          <Route path='/placeorder/:id' component={ShippingScreen} />
+          <Route path='/payment/:id' component={ShippingScreen} />
           <Route path='/selAddress' component={SelAddressScreen} />
-          
+          {/* <Route path='/order/:id' component={OrderScreen} /> */}
+          <Route path='/order/:id' component={OrderDetailScreen} />
+          <Route path='/order' exact component={OrderTouristScreen} />
+          <Route path='/zitiquhuo/tourist' component={OrderTouristScreen} />
+          <Route path='/shapes' component={ShapesScreen} />
+          <Route path='/freshener/:id' component={FreshenerScreen} />
+          <Route path='/designer' component={DesignerScreen} />
           {/* <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
           <Route path='/shipping' component={ShippingScreen} />
@@ -50,7 +62,7 @@ function App() {
           <Route path='/admin/orderlist' component={OrderListScreen} /> */}
         {/* </Container> */}
       </main>
-      <Footer />
+      {headFootInfo.show &&  <Footer />}
     </Router>
   );
 }

@@ -19,10 +19,26 @@ function ProductScreen({ match }) {
     const dispatch = useDispatch()
     const productDetails = useSelector(state => state.productDetails)
     const { error, loading, product } = productDetails
+    const [slidesPerView,setSlidesPerView] = useState(4)
     useEffect(() => {
 
         dispatch(listProductDetails(productId))
+        resize()
+        window.onresize = resize
     }, [dispatch, productId])
+    const resize = () => {
+        let w = window.innerWidth*1
+        console.log(w)
+        if(w<540){
+            setSlidesPerView(1)
+        }else if(w< 640){
+            setSlidesPerView(2)
+        }else if(w<935) {
+            setSlidesPerView(3)
+        }else {
+            setSlidesPerView(4)
+        }
+    }
     const handleImg = (e) => {
         setImage(e.target.src);
     }
@@ -79,7 +95,7 @@ function ProductScreen({ match }) {
                                 </div>
                                 <div className="left-mob">
                                     <div className="product-img">
-                                        <img className="main-img" src="./img/index/box1.png" />
+                                    <img className="main-img" src={image?image:(product&&product.info && product.info.image)} />
                                     </div>
                                     <div className="scroll-imgs">
                                         
@@ -165,9 +181,9 @@ function ProductScreen({ match }) {
                                         direction={'horizontal'}
 
                                         loop={true}
-                                        slidesPerView={3}
+                                        slidesPerView={slidesPerView}
                                         spaceBetween="-3%"
-                                        autoplay
+                                        
                                         navigation={{
                                             nextEl: '.swiper-button-next',
                                             prevEl: '.swiper-button-prev',
@@ -179,7 +195,7 @@ function ProductScreen({ match }) {
 
                                         {
                                             product&&product.products&&product.products.map((item,index) => {
-                                                return  <SwiperSlide><div >
+                                                return  <SwiperSlide><div  style={{marginLeft: '15%'}}>
                                                             <div class="swiperImg">
                                                                 <img src={item.image} />
                                                             </div>

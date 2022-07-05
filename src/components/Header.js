@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { logout } from '../actions/userActions'
 import {getCart} from '../actions/cartActions'
-function Header() {
+function Header(props) {
 
 	const userLogin = useSelector(state => state.userLogin)
 	const cartItems = useSelector(state => state.cart.cartItems)
@@ -94,7 +94,7 @@ function Header() {
 						</div>
 					</div>
 				</div>
-				<Link to="/design"><div className="design nav-item" >Design My Air Freshener</div></Link>
+				<Link to="/shapes"><div className="design nav-item" >Design My Air Freshener</div></Link>
 				<Link to="/about"><div className="about nav-item">About</div></Link>
 				<Link to="/contact"><div className="about nav-item">Contact</div></Link>
 				
@@ -148,7 +148,7 @@ function Header() {
 			<div className="line"></div>
 			<div className="mask_bottom">
 			
-				<Link to="/design">
+				<Link to="/shapes">
 					<div>Design My</div>
 					<div>Air Freshener</div>
 				</Link>

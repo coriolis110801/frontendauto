@@ -17,7 +17,7 @@ header .header {
 	padding: 0 0.5rem;
 }
 
-header .logo {
+.logo {
 	width: 1.7rem;
 	height: 0.52rem;
 	background: url(../images/index/logo.png) no-repeat;
@@ -299,7 +299,7 @@ header .toggle-wrap>div {
 		padding: 0.2rem 0.5rem;
 	}
 
-	header .logo {
+	.logo {
 		width: 3rem;
 		height: 0.96rem;
 	}

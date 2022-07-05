@@ -4,6 +4,7 @@ import Message from '../components/Message'
 import { addToCart, removeFromCart } from '../actions/cartActions'
 import '../css/CartScreen.css'
 import Confirm from '../components/Confirm'
+import {CART_REQUEST_DATA} from '../constants/cartConstants'
 function CartScreen({ match, location, history }) {
    const [isLogin, setIslogin] = useState(false);
    
@@ -19,14 +20,40 @@ function CartScreen({ match, location, history }) {
     }, [dispatch])
 
 
-    const removeFromCartHandler = (id) => {
-        dispatch(removeFromCart(id))
+    const removeFromCartHandler = (index) => {
+        return () => {
+			dispatch(removeFromCart(index))
+		}
     }
 
-    const checkoutHandler = () => {
-        history.push('/login?redirect=shipping')
-    }
+    // const checkoutHandler = () => {
+    //     history.push('/login?redirect=shipping')
+	// }
+	const changeNum = (index, num) => {
+		return () => {
+			let arr = [...cart.itemsList]
+			if(arr[index]) {
+				arr[index].qty = (arr[index].qty || 0) * 1 + num;
+				dispatch({
+					type: CART_REQUEST_DATA,
+					payload: {
+						itemsList: cart.itemsList,
+						cartItems: cart.itemsList.reduce((pre, now)=>{
+							return pre + now.qty
+						}, 0),
+
+						totalPrice: cart.itemsList.reduce((pre, now)=>{
+							return pre + now.qty * now.price
+						}, 0)
+					},
+				})
+			}
+		}
+	}
     const Checkout = () => {
+		if(!cart || !cart.itemsList || cart.itemsList.length == 0){
+			return;
+		}
         if (userInfo) {
 			history.push('/selAddress')
 		}else {
@@ -67,16 +94,16 @@ function CartScreen({ match, location, history }) {
 									</div>
                                     <div>{item.color}</div>
                                     <div>{item.combo}</div>
-                                    <div>£{item.price * item.qty}</div>
+                                    <div>£{item.price}</div>
 									<div className="flex-center" style={{margin: '0 1%'}}>
 										<div style={{marginRight: '0.06rem'}}>{item.qty}</div>
 										<div className="flex-center" style={{flexDirection: 'column'}}>
-											<a href="javascript:void(0);"><img src="./images/index/up1.png" style={{width: '0.2rem', height: '0.2rem'}} /></a>
-											<a href="javascript:void(0);"><img src="./images/index/down2.png" style={{width: '0.2rem', height: '0.2rem'}} /></a>
+											<a href="javascript:void(0);" onClick={changeNum(index, 1)}><img src="./images/index/up1.png" style={{width: '0.2rem', height: '0.2rem'}} /></a>
+											<a href="javascript:void(0);" onClick={changeNum(index, -1)}><img src="./images/index/down2.png" style={{width: '0.2rem', height: '0.2rem'}} /></a>
 										</div>
 									</div>
 									<div className="basket-money">£{item.price * item.qty}</div>
-									<a href="javascript:void(0);"><img src="./images/index/err.png" style={{width: '0.2rem', height: '0.2rem'}} /></a>
+									<a href="javascript:void(0);" onClick={removeFromCartHandler(index)}><img src="./images/index/err.png" style={{width: '0.2rem', height: '0.2rem'}} /></a>
 								</div>
 							</div>
 						</div>
@@ -207,7 +234,7 @@ function CartScreen({ match, location, history }) {
 						<div className="left">
 						</div>
 						<div className="right">
-							<div className="jixu"  style={{'margin-top': '0.01rem;'}} onClick={Checkout}>Continue to Checkout</div>
+							<div className={!cart || !cart.itemsList || cart.itemsList.length == 0?'jixu disabled':'jixu'}   style={{'margin-top': '0.01rem;'}} onClick={Checkout}>Continue to Checkout</div>
 						</div>
 					</div>
 				</div>

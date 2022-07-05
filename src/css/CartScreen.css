@@ -281,6 +281,10 @@
     font-size: 0.19rem;
     cursor: pointer;
 }
+.CartScreen .disabled {
+	background: #6b6b6b;
+	cursor: not-allowed;
+}
 
 @media screen and (max-width:1070px) {
 	.CartScreen .content {

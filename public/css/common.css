@@ -12,6 +12,7 @@ body {
 	margin: 0 auto;
 	color: #fff !important;
 	font-family: JosefinSans-Regular !important;
+	
 }
 .fullcreen {
 	width: 100%;
@@ -19,6 +20,16 @@ body {
 }
 .spinner-border,.alert {
 	color: black;
+}
+.alert-warning {
+    color: #7d5a29;
+    background-color: #fcefdc;
+    border-color: #fbe8cd;
+}
+.alert-info {
+    color: #10516c;
+    background-color: #d2ebf5;
+    border-color: #c0e3f2;
 }
 .maxWidth {
 	max-width: 1200px;
@@ -55,6 +66,7 @@ input,
 textarea,
 select {
 	border: none;
+	background: none;
 }
 
 option {

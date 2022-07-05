@@ -28,7 +28,9 @@ import {
 import {
     orderReducer
 } from './reducers/orderReducers'
-import {addressReducers} from './reducers/addressReducers'
+import {addressReducers, pickupReducers} from './reducers/addressReducers'
+import {headFootReducers} from './reducers/headFootReducers'
+
 const reducer = combineReducers({
     productList: productListReducer,
     productDetails: productDetailsReducer,
@@ -50,7 +52,9 @@ const reducer = combineReducers({
     order: orderReducer,
     message: messageReducer,
     addresses: addressReducers,
-    designInfo: designReducers
+    pickUpAddr: pickupReducers,
+    designInfo: designReducers,
+    headFootInfo: headFootReducers
 })
 
 

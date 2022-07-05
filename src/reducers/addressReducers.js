@@ -3,10 +3,13 @@ import {
     GET_ADDRESS,
     GET_ADDRESS_REQUEST,
     EDIT_ADDRESS,
-    EDIT_ADDRESS_COMPLETE
+    EDIT_ADDRESS_COMPLETE,
+    SET_PICKUP,
+    GET_PICKUP_REQUEST,
+    GET_PICKUP_COMPLETE
 } from '../constants/addressConstants'
 
-export const addressReducers = (state = { addresses: [], loading: false, loading2: false }, action) => {
+export const addressReducers = (state = { addresses: [], loading: false, loading2: false,scents: [] }, action) => {
     switch (action.type) {
         case GET_ADDRESS:
             if(action.payload) {
@@ -43,6 +46,32 @@ export const addressReducers = (state = { addresses: [], loading: false, loading
             return {
                 ...state,
                 loading2: false
+            }
+        
+
+        default:
+            return state
+    }
+}
+
+export const pickupReducers = (state = {}, action) => {
+    switch (action.type) {
+        case SET_PICKUP:
+            return {
+                ...state,
+                ztAddress: action.payload,
+                loading: false
+            }
+        case GET_PICKUP_REQUEST:
+            return {
+                ...state,
+                loading: true
+            }
+        
+        case GET_PICKUP_COMPLETE: 
+            return {
+                ...state,
+                loading: false
             }
         
 

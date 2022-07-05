@@ -33,7 +33,7 @@ function Account({ history }) {
 						menu === '1-1' ? <EditPwdScreen />:''
 					}
 					{
-						menu === '2-0' ? <OrderScreen />:''
+						menu === '2-0' ? <OrderScreen history={history} />:''
 					}
 					{
 						menu === '3-0' ? <DesignScreen /> :''

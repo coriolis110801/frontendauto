@@ -375,7 +375,7 @@
 .product .swiperImg{
 	height: 0;
 	width: 70%;
-	padding-top: 70%;
+	padding: 70% 15% 0;
 	position: relative;
 }
 .product .swiperImg > img {

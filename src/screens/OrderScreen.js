@@ -85,6 +85,11 @@ function OrderScreen({ history }) {
 			setIndexObj(obj);
 		}
 	}
+	const navTo = (id) => {
+		return () => {
+			history.push('/order/' + id);
+		}
+	}
 	return (
 		<div className="right OrderScreen">
 			{isDelete&&<Confirm okFun={deleteOrderCon} noFun={noFun}  tip="do you really want to delete this order?" />}
@@ -166,7 +171,7 @@ function OrderScreen({ history }) {
 																		</td>:''}
 																		{idx==0?<td rowspan={item.details.length} className="textGreen">£{item.price}</td>:''}
 																		{idx==0?<td rowspan={item.details.length}>
-																			{item.status === 1 ? <div className="payNow basket-btn">Pay Now</div> : ''}
+																			{item.status === 1 ? <div onClick={navTo(item.userorderid)} className="payNow basket-btn">Pay Now</div> : ''}
 																			{item.status == 0 ? <div className="basket-btn">Amend</div>: ''}
 																			{item.status !== 1  ? <div className="basket-btn">Download invoice</div>: ''}
 																			
@@ -344,7 +349,7 @@ function OrderScreen({ history }) {
 													<img src={it.product.image || it.product.image_new} className="basket-goods-img" />
 														<div className="flex"></div>
 														<div className="basket-goods-desc">
-															{item.status === 1 ? <div className="payNow basket-btn">Pay Now</div> : ''}
+															{item.status === 1 ? <div onClick={navTo(item.userorderid)} className="payNow basket-btn">Pay Now</div> : ''}
 															{item.status == 0 ? <div className="basket-btn">Amend</div>: ''}
 															{item.status !== 1  ? <div className="basket-btn">Download invoice</div>: ''}
 														</div>

@@ -53,10 +53,10 @@
     /* margin-top: .16rem; */
 
 }
-.ShippingScreen .list-group-flush>.list-group-item:last-child {
+.list-group-flush>.list-group-item:last-child {
     border-bottom-width: 0;
 }
-.ShippingScreen .list-group-flush>.list-group-item {
+.list-group-flush>.list-group-item {
     border-width: 0 0 1px;
 }
 .col-md-1 {

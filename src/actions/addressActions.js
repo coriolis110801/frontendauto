@@ -5,14 +5,18 @@ import {
     REQUEST_FAIL,
     GET_ADDRESS_REQUEST,
     EDIT_ADDRESS_COMPLETE,
-    EDIT_ADDRESS
+    EDIT_ADDRESS,
+    SET_PICKUP,
+    GET_PICKUP_REQUEST,
+    GET_PICKUP_COMPLETE
 } from '../constants/addressConstants'
 import { baseAPIUrl } from '../constants/apiConstants'
 
 
-function errorMsg(error, dispatch) {
+function errorMsg(error, dispatch, type) {
+    if(!type) type = REQUEST_FAIL;
     dispatch({
-        type: REQUEST_FAIL
+        type
     })
     dispatch(messageUpdate(error.response && error.response.data.detail? error.response.data.detail: error.message))
     
@@ -140,5 +144,36 @@ export const saveAddress = (item, closeAddress) =>  async (dispatch, getState) =
             type: EDIT_ADDRESS_COMPLETE
         })
         errorMsg(error, dispatch)
+    }
+}
+
+export const getZtAddress = () => async (dispatch, getState) => {
+    try {
+        dispatch({ type: GET_PICKUP_REQUEST })
+        // const {
+        //     userLogin: { userInfo },
+        // } = getState()
+        const config = {
+            headers: {
+                'Content-type': 'application/json'
+            }
+        }
+        // if(userInfo && userInfo.token) config.headers.Authorization = `Bearer ${userInfo.token}`
+        const {data}= await axios.get(baseAPIUrl + 'zitidizhi', config)
+        // console.log(data, data[0], 6666)
+        if(data&&data[0]) {
+            dispatch({
+                type: SET_PICKUP,
+                payload: data[0]
+            })
+        }else if(data.message){
+            errorMsg(data, dispatch, GET_PICKUP_COMPLETE)
+            
+        }
+       
+
+    } catch (error) {
+        errorMsg(error, dispatch, GET_PICKUP_COMPLETE)
+   
     }
 }
