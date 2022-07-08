@@ -28,7 +28,6 @@ function ProductScreen({ match }) {
     }, [dispatch, productId])
     const resize = () => {
         let w = window.innerWidth*1
-        console.log(w)
         if(w<540){
             setSlidesPerView(1)
         }else if(w< 640){
