@@ -43,7 +43,7 @@ function CartScreen({ match, location, history }) {
 						}, 0),
 
 						totalPrice: cart.itemsList.reduce((pre, now)=>{
-							return pre + now.qty * now.price
+							return pre + now.qty * now.price * (now.discount || 1)
 						}, 0)
 					},
 				})
@@ -94,7 +94,7 @@ function CartScreen({ match, location, history }) {
 									</div>
                                     <div>{item.color}</div>
                                     <div>{item.combo}</div>
-                                    <div>£{item.price}</div>
+                                    <div>£{item.price * (item.discount)}</div>
 									<div className="flex-center" style={{margin: '0 1%'}}>
 										<div style={{marginRight: '0.06rem'}}>{item.qty}</div>
 										<div className="flex-center" style={{flexDirection: 'column'}}>
@@ -102,7 +102,7 @@ function CartScreen({ match, location, history }) {
 											<a href="javascript:void(0);" onClick={changeNum(index, -1)}><img src="./images/index/down2.png" style={{width: '0.2rem', height: '0.2rem'}} /></a>
 										</div>
 									</div>
-									<div className="basket-money">£{item.price * item.qty}</div>
+									<div className="basket-money">£{item.price * (item.discount || 1) * item.qty}</div>
 									<a href="javascript:void(0);" onClick={removeFromCartHandler(index)}><img src="./images/index/err.png" style={{width: '0.2rem', height: '0.2rem'}} /></a>
 								</div>
 							</div>
@@ -119,12 +119,13 @@ function CartScreen({ match, location, history }) {
 					<div className="basket-formTwo maxWidth">
 						<div className="basket-formTwo-title">
 							<img className="swiper-pre" src="./images/index/left-l.png" />
-							<div className="dot active"></div>
-							<div className="dot"></div>
-							<div className="dot"></div>
-							<div className="dot"></div>
-							<div className="dot"></div>
-							<div className="dot"></div>
+							<div  className="dot active"></div>
+							{
+								cart&&cart.itemsList&&cart.itemsList.map((item, index) => {
+									return <div  className={'dot ' + index==0?'active':''}></div>
+								})
+							}
+							
 							<img className="swiper-next" src="./images/index/right-l.png" />
 						</div>
 						<div className="basket-swiper-container">
@@ -134,14 +135,19 @@ function CartScreen({ match, location, history }) {
 										Product
 									</div>
 									<div className="basket-formTwo-content">
-										<div className="flex">
-											<img src="./images/index/box1.png" className="basket-goods-img" />
-											<div style={{flex: 1}}></div>
-											<div className="basket-goods-desc">
-												<div>Product Name Here</div>
-												<div>0</div>
-											</div>
-										</div>
+									{
+										cart&&cart.itemsList&&cart.itemsList.map((item, index) => {
+											return <div className="flex">
+														<img src={item.image} className="basket-goods-img" />
+														<div style={{flex: 1}}></div>
+														<div className="basket-goods-desc">
+															<div>{item.name}</div>
+															<div>£{item.price * (item.discount || 1) * item.qty}</div>
+														</div>
+													</div>
+										})
+									}
+										
 									</div>
 								</div>
 								<div className="swiper-slide">
@@ -222,8 +228,8 @@ function CartScreen({ match, location, history }) {
 						</div>
 						
 						<div className="basket-formTwo-footer">
-							<div>Items: 1 ● Total:</div>
-							<div>£00.00</div>
+							<div>Items: cart.cartItems ● Total:</div>
+							<div>£{cart.totalPrice}</div>
 						</div>
 					</div>
 				</div>

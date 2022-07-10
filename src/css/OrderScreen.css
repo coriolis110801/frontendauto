@@ -498,7 +498,7 @@ li {
 }
 
 @media screen and (max-width:690px){
-	.left .title ,.name{
+	.left .title ,.OrderScreen  .name{
 		font-size: 0.4rem !important;
 		margin: 0.4rem 0;
 	}

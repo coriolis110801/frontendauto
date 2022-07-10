@@ -86,11 +86,11 @@ function HomeScreen({ history }) {
                                                 products && products.map((item, index) => {
                                                     return <div className="ulBox">
                                                         <Link to={'/product/' + item.id}><img src={item.image} /></Link>
-                                                        <div className="moneytext">{item.name}</div>
+                                                        <div className="money" style={{'justify-content': 'center'}}>{item.name}</div>
                                                         <div className="money">
 
 
-                                                            {item.discount !== 1 ? <div><del>£{(item.price).toFixed(2)}</del><span>£{(item.discount * item.price).toFixed(2)}</span></div> : <span>£{(item.price).toFixed(2)}</span>}
+                                                            {item.discount !== 1 ? <div><del>£{(item.price).toFixed(2)}</del><span style={{color: '#FFC008','marginLeft': '0.2rem'}}>£{(item.discount * item.price).toFixed(2)}</span></div> : <span style={{color: '#FFC008','marginLeft': '0.2rem'}}>£{(item.price).toFixed(2)}</span>}
 
                                                         </div>
                                                         <div className="flex-center">
@@ -110,7 +110,7 @@ function HomeScreen({ history }) {
                                         </div>
                                     </div>
                                     <div className="relative">
-                                        <div className="swiperTitle">DisCover More{slidesPerView}</div>
+                                        <div className="swiperTitle">DisCover More</div>
 
                                         <Swiper
 

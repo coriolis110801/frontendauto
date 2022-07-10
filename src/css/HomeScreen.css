@@ -71,13 +71,7 @@
 	width: 100%; 
 	height: 202px;
 }
-.home .moneytext {
-    color: #747A81;
-    font-size: 0.14rem;
-    font-weight: 600;
-    margin: 0.08rem 0 0.1rem 0;
-    display: flex;
-}
+
 .home .money{
 	color: #747A81;
 	font-size: 0.14rem;
@@ -107,13 +101,11 @@
 	cursor: pointer;
 }
 .home .swiperTitle{
-	color: #3F757B;
+	color: #4C747A;
 	font-weight: 600;
 	margin: 0.4rem 0 0.4rem 0.6rem;
-	font-weight: bold;
-    font-stretch: normal;
-    font-size: 30px;
-    font-family: "Aktiv Grotesk";
+	font: normal normal bold 30px/38px Aktiv Grotesk;
+	
 }
 
 .home .swiper-containerFour,

@@ -21,7 +21,7 @@ export const getCart = (id, qty) => async (dispatch, getState) => {
     })
     // localStorage.setItem('cartItems', JSON.stringify(getState().cart))
 }
-export const addToCart = (data, qty, color, combo) => async (dispatch, getState) => {
+export const addToCart = (data, qty, color, combo, discount) => async (dispatch, getState) => {
     // const { data } = await axios.get(`/api/products/${id}`)
 
     dispatch({
@@ -32,6 +32,7 @@ export const addToCart = (data, qty, color, combo) => async (dispatch, getState)
             image: data.image,
             price: data.price,
             countInStock: data.total,
+            discount: data.discount,
             qty,
             color,
             combo

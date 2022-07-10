@@ -35,7 +35,7 @@ export const cartReducer = (state = { cartItems: 0, itemsList: [], shippingAddre
                 return {
                     ...state,
                     cartItems: (state.cartItems*1 || 0) + 1,
-                    totalPrice: (state.totalPrice || 0) + item.price * item.qty,
+                    totalPrice: (state.totalPrice || 0) + item.price * (item.discount||1) * item.qty,
                     itemsList: state.itemsList.map(x =>
                         x.product === item.product && item.color===x.color && item.combo===x.combo ? item : x)
                 }
@@ -44,7 +44,7 @@ export const cartReducer = (state = { cartItems: 0, itemsList: [], shippingAddre
                 return {
                     ...state,
                     cartItems: (state.cartItems*1 || 0) + 1,
-                    totalPrice: (state.totalPrice || 0) + item.price * item.qty,
+                    totalPrice: (state.totalPrice || 0) + item.price * (item.discount||1) * item.qty,
                     itemsList: [...(state.itemsList || []), item]
                 }
             }
