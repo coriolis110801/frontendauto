@@ -28,8 +28,8 @@ function ContactScreen({ history }) {
 					<div className="care">
 						<div className="one">Address</div>
 						<div>AutoSqeak</div>
-						<div>Unit 12,</div>
-						<div>14-16 Wadsworth Rd,</div>
+						<div>Unit 12</div>
+						<div>14-16 Wadsworth Rd</div>
 						<div>London</div>
 						<div>UB6 7LD</div>
 						<div className="one">Contact Information:</div>
