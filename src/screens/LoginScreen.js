@@ -84,9 +84,9 @@ function LoginScreen({ location, history }) {
 			<div className="login">
 				
 				<div className="maxWidth padLR" >
-					<div className="title">Access Your Account{loading}11</div>
+					<div className="title">Access Your Account{loading}</div>
 					<div className="content">
-						Login using your details below to access your account. If you're newhere, pleasecreate an account ro receive exclusive benefits. By providing us with your details,ordering from AutoSqueak will be a faster and pleasant experience.
+                    Login using your details below to access your account. If you're new here, please create an account ro receive exclusive benefits. By providing us with your details,ordering from AutoSqueak will be a faster and pleasant experience.
 				</div>
 				</div>
 				<div className="sec2">
@@ -112,7 +112,7 @@ function LoginScreen({ location, history }) {
 						{
 							redirect!=='/cart' ?<div className="left">
 							<div className="name">Create an Account</div>
-							<div className="cont contTwo">To receive exclusive benefite</div>
+							<div className="cont contTwo">To receive exclusive benefits</div>
 							<div className="uil">
 								<div className="flex-center lis">
 									<input placeholder="Email Address" value={regEmail} onChange={handleRegEmail} />
