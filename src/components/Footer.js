@@ -11,7 +11,7 @@ function Footer(props) {
                     <div className="btmUl">About</div>
                     <div className="btmUl">Contact</div>
                     <div className="btmUl">Delivery & Returns</div>
-                    <div className="btmUl">Terns & Conditions</div>
+                    <div className="btmUl">Terms & Conditions</div>
                     <div className="btmUl">Privacy Policy</div>
                 </div>
                 <div>Customer Support Team: 07701079246 / 07455025081</div>
