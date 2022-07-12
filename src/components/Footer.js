@@ -9,14 +9,14 @@ function Footer(props) {
                 <img src="./images/index/logo1.png" className="botmImg" />
                 <div className="flex bottomBox">
                     <div className="btmUl">About</div>
-                    <div className="btmUl">Comtact</div>
+                    <div className="btmUl">Contact</div>
                     <div className="btmUl">Delivery & Returns</div>
                     <div className="btmUl">Terns & Conditions</div>
                     <div className="btmUl">Privacy Policy</div>
                 </div>
-                <div>Contact Details to Go Here</div>
+                <div>Customer Support Team: 07701079246 / 07455025081</div>
             </div>
-            <div className="foot">All Content @ 2021 Auto Clean. Company Information to Go Here.</div>
+            <div className="foot">Copyright © 2021 AutoSqueak. All rights reserved.</div>
 
         </footer>
     )
