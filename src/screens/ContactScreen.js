@@ -8,7 +8,7 @@ function ContactScreen({ history }) {
           <div className="maxWidth">
 				<div className="topTitle">Get in Touch</div>
 				<div className="topCont">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nonlacinia turpis. Nunc pretium lacinia dolor ac iaculis. Nullam utviverra velit. Phasellus quis dui massa. Aliquam leo odio, dictum eumassa non, venenatis vehicula nunc. Cu rabitur at tincidunt justo, uttristique odio.
+				Get in touch with our team via Email & phone, or click the right-bottom corner live chat button to speak to our customer service.
 				</div>
 			</div>
 			<div className="bg">
@@ -28,13 +28,13 @@ function ContactScreen({ history }) {
 					<div className="care">
 						<div className="one">Address</div>
 						<div>AutoSqeak</div>
-						<div>Address Line1</div>
-						<div>Address Line2</div>
-						<div>City</div>
-						<div>Postcode</div>
+						<div>Unit 12,</div>
+						<div>14-16 Wadsworth Rd,</div>
+						<div>London</div>
+						<div>UB6 7LD</div>
 						<div className="one">Contact Information:</div>
-						<div className="tel">0113 000 000</div>
-						<div>address@mail.com</div>
+						<div className="tel">07455025081</div>
+						<div>info@autosqueak.com</div>
 					</div>
 				</div>
 			</div>
