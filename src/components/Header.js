@@ -24,7 +24,7 @@ function Header(props) {
 	console.log(userInfo,999);
     return (
         <header>
-           <div className="head">Offer + Call to Action to Go Here</div>
+           <div className="head">Free UK Delivery - Orders over £100</div>
 	<div className="maxWidth">
 		<div className="header flex-between">
 			<a href="###"><div className="logo"></div></a>

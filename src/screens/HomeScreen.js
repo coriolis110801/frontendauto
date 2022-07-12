@@ -69,12 +69,9 @@ function HomeScreen({ history }) {
                                 <div>
                                     <div className="car">
                                         <div className="content absolute">
-                                            <div className="title">Call to Action</div>
-                                            <div className="title">to Go Here</div>
-                                            <div className="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                                            nonlacinia turpis Nunc pretium lacinia dolor ac iaculis Nullam ut viverra velit.
-                                            Phasellus quis dui massa. Aliquam leo odio, dictum eu massa non,venenatis vehicula
-                                                nunc Curabitur at tincid unt justo, ut tristique odio.</div>
+                                        <div className="title">Welcome to</div>
+                                             <div className="title">AutoSqueak</div>
+                                             <div className="cont">One of the largest and most progressive distributors of car vehicle cleaning products in the UK.</div>
                                             <div className="btn" onClick={changShow}>Shop Now</div>
                                         </div>
                                     </div>
