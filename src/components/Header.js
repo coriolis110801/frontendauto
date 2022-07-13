@@ -15,13 +15,10 @@ function Header(props) {
 		e.preventDefault();
         dispatch(logout())
 	}
-	
 	useEffect(()=> {
 		console.log(cartItems,'cart.cartItems.cartItems');
 		// dispatch(getCart());
-		console.log(cartItems,'cart.cartItems.cartItems');
 	},[]);
-	console.log(userInfo,999);
     return (
         <header>
            <div className="head">Free UK Delivery - Orders over £100</div>
@@ -35,62 +32,78 @@ function Header(props) {
 					<img src="./images/index/UP.png" className="down-y" />
 					<div className="imgUl">
 						<div className="flex-center wrap" >
-							<div className="carui_box">
+							<Link to="/store/3" className="carui_box">
 								<img src="./images/index/carui1.png" className="carUi" />
 								<div className="carName">
 									<div>Chemical</div>
 									<div>Products</div>
 								</div>
-							</div>
-							<div className="carui_box">
+							</Link>
+							<Link to="/store/4" className="carui_box" >
 								<img src="./images/index/carui2.png" className="carUi" />
 								<div className="carName">
 									<div>Air</div>
 									<div>Fresheners</div>
 								</div>
-							</div>
-							<div className="carui_box">
+							</Link>
+							<Link to="/store/6" className="carui_box" >
+						
 								<img src="./images/index/carui3.png" className="carUi" />
 								<div className="carName">
 									<div>H.P. Pump</div>
 									<div>and Parts</div>
 								</div>
-							</div>
-							<div className="carui_box">
+							</Link>
+							<Link to="/store/7" className="carui_box" >
+						
 								<img src="./images/index/carui4.png" className="carUi" />
 								<div className="carName">
 									<div>Vacuum</div>
 									<div>Cleaners</div>
 								</div>
-							</div>
-							<div className="carui_box">
+							</Link>
+							<Link to="/store/8" className="carui_box" >
+							
 								<img src="./images/index/carui5.png" className="carUi" />
 								<div className="carName">
 									<div>Aerosol</div>
 									<div>Products</div>
 								</div>
-							</div>
-							<div className="carui_box">
+						
+							</Link>
+							<Link to="/store/5" className="carui_box" >
+							
 								<img src="./images/index/carui6.png" className="carUi" />
 								<div className="carName">
 									<div>Compression</div>
 									<div>Sprayers</div>
 								</div>
-							</div>
-							<div className="carui_box">
+					
+							</Link>
+							<Link to="/store/9" className="carui_box" >
+							
 								<img src="./images/index/carui7.png" className="carUi" />
 								<div className="carName">
 									<div>Valeting</div>
 									<div>Accessories</div>
 								</div>
-							</div>
-							<div className="carui_box">
+						
+							</Link>
+							<Link to="/store/20" className="carui_box" >
+							
 								<img src="./images/index/carui8.png" className="carUi" />
 								<div className="carName">
 									<div>Pipe Fixing</div>
 									<div>And Fitting</div>
 								</div>
-							</div>
+							</Link>
+							<Link to="/store/12" className="carui_box" >
+							
+								<img src="./images/index/carui12.png" className="carUi" />
+								<div className="carName">
+									<div>Microfibre</div>
+								</div>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -124,25 +137,28 @@ function Header(props) {
 				<img src="./images/index/down3.png" />
 			</div>
 			<div className="shopContent">
-				<div>Chemical Products</div>
-				<div>Air Fresheners</div>
+				<div><Link to="/store/3">Chemical Products</Link></div>
+				<div><Link to="/store/4">Air Fresheners</Link></div>
 				<div >
-					<div>H.P. Pump and</div>
-					<div>Parts</div>
+					<Link to="/store/6">H.P. Pump and Parts</Link>
 				</div>
-				<div>Vacuum Cleaners</div>
-				<div>Aerosol Products</div>
+				<div><Link to="/store/7">Vacuum Cleaners</Link></div>
+				<div><Link to="/store/8">Aerosol Products</Link></div>
 				<div >
-					<div>Compression</div>
-					<div>Sprayers</div>
+					<Link to="/store/5">Compression Sprayers</Link>
 				</div>
 				<div >
-					<div>Valeting</div>
-					<div>Accessories</div>
+					<Link to="/store/9">Valeting Accessories</Link>
 				</div>
 				<div >
-					<div>Pipe Fixing and</div>
-					<div>Fitting</div>
+					<Link to="/store/20">
+					Pipe Fixing andFitting
+					</Link>
+				</div>
+				<div >
+					<Link to="/store/12">
+					Microfibre
+					</Link>
 				</div>
 			</div>
 			<div className="line"></div>

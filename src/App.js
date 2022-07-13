@@ -18,12 +18,13 @@ import OrderTouristScreen from './screens/OrderTouristScreen'
 import ShapesScreen from './screens/ShapesScreen'
 import FreshenerScreen from './screens/FreshenerScreen'
 import DesignerScreen from './screens/DesignerScreen'
+import StoreScreen from './screens/StoreScreen'
 import { useDispatch, useSelector } from 'react-redux'
-function App() {
+function App(props) {
   const headFootInfo = useSelector(state => state.headFootInfo)
   return (
     <Router>
-      {headFootInfo.show &&  <Header />}
+      {headFootInfo.show &&  <Header {...props} />}
       <main >
         {/* <Container> */}
           <Route path='/' component={HomeScreen} exact />
@@ -44,6 +45,7 @@ function App() {
           <Route path='/shapes' component={ShapesScreen} />
           <Route path='/freshener/:id' component={FreshenerScreen} />
           <Route path='/designer' component={DesignerScreen} />
+          <Route path='/store/:id' component={StoreScreen} />
           {/* <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
           <Route path='/shipping' component={ShippingScreen} />

@@ -43,7 +43,8 @@ export const productListReducer = (state = { products: [], products1: [] }, acti
                 products: action.payload.products,
                 page: action.payload.page,
                 pages: action.payload.pages,
-                products1: action.payload.products1
+                //products1: action.payload.products1
+                title: action.payload.title,
             }
 
         case PRODUCT_LIST_FAIL:
