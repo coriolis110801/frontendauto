@@ -19,6 +19,10 @@ import ShapesScreen from './screens/ShapesScreen'
 import FreshenerScreen from './screens/FreshenerScreen'
 import DesignerScreen from './screens/DesignerScreen'
 import StoreScreen from './screens/StoreScreen'
+import PrivatepolicyScreen from './screens/PrivatepolicyScreen'
+import ConditionScreen from './screens/ConditionScreen'
+import TermsdeliveryScreen from './screens/TermsdeliveryScreen'
+
 import { useDispatch, useSelector } from 'react-redux'
 function App(props) {
   const headFootInfo = useSelector(state => state.headFootInfo)
@@ -46,6 +50,9 @@ function App(props) {
           <Route path='/freshener/:id' component={FreshenerScreen} />
           <Route path='/designer' component={DesignerScreen} />
           <Route path='/store/:id' component={StoreScreen} />
+          <Route path='/privatepolicy' component={PrivatepolicyScreen} />
+          <Route path='/condition' component={ConditionScreen} />
+          <Route path='/termsdelivery' component={TermsdeliveryScreen} />
           {/* <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
           <Route path='/shipping' component={ShippingScreen} />

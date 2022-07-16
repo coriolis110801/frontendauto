@@ -1,6 +1,5 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-
+import { Link } from 'react-router-dom'
 function Footer(props) {
     console.log('footer', props)
     return (
@@ -8,11 +7,11 @@ function Footer(props) {
             <div className="bottom">
                 <img src="./images/index/logo1.png" className="botmImg" />
                 <div className="flex bottomBox">
-                    <div className="btmUl">About</div>
-                    <div className="btmUl">Contact</div>
-                    <div className="btmUl">Delivery & Returns</div>
-                    <div className="btmUl">Terms & Conditions</div>
-                    <div className="btmUl">Privacy Policy</div>
+                    <div className="btmUl"><Link to='/about'>About</Link></div>
+                    <div className="btmUl"><Link to='/contact'>Contact</Link></div>
+                    <div className="btmUl"><Link to='/termsdelivery'>Delivery & Returns</Link></div>
+                    <div className="btmUl"><Link to='/condition'>Terms & Conditions</Link></div>
+                    <div className="btmUl"><Link to='/privatepolicy'>Privacy Policy</Link></div>
                 </div>
                 <div>Customer Support Team: 07701079246 / 07455025081</div>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../css/AboutScreen.css'
 
 function About({ history }) {
@@ -38,7 +39,7 @@ function About({ history }) {
 			<div className="operate">
 				<div className="flex secctBtn maxWidth">
 					<div className="title">Check Out Our Products</div>
-					<div className="btns">Shop Now</div>
+					<div className="btns"><Link to="/">Shop Now</Link></div>
 				</div>
 			</div>
         </div >

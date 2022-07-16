@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../css/ContactScreen.css'
 
 function ContactScreen({ history }) {
@@ -41,7 +42,7 @@ function ContactScreen({ history }) {
 			<div className="bg2">
 				<div className="maxWidth flex secctBtn">
 					<div className="title">Check Out Our Products</div>
-					<div className="btns">Shop Now</div>
+					<div className="btns"><Link to="/">Shop Now</Link></div>
 				</div>
 			</div>
         </div >

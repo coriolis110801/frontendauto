@@ -29,9 +29,7 @@ function HomeScreen({ history }) {
         window.onresize = resize
 
     }, [dispatch, keyword])
-    function changShow() {
 
-    }
     const resize = () => {
         let w = window.innerWidth*1
         if(w<540){
@@ -72,7 +70,8 @@ function HomeScreen({ history }) {
                                         <div className="title">Welcome to</div>
                                              <div className="title">AutoSqueak</div>
                                              <div className="cont">One of the largest and most progressive distributors of car vehicle cleaning products in the UK.</div>
-                                            <div className="btn" onClick={changShow}>Shop Now</div>
+                                            <div className="btn" >
+                                            <Link to='/store/3'>Shop Chemicals!</Link></div>
                                         </div>
                                     </div>
                                     <div>

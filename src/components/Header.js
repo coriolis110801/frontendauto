@@ -24,7 +24,7 @@ function Header(props) {
            <div className="head">Free UK Delivery - Orders over £100</div>
 	<div className="maxWidth">
 		<div className="header flex-between">
-			<a href="###"><div className="logo"></div></a>
+			<a href="/"><div className="logo"></div></a>
 			<div className="flex-center shop nav">
 				<div className="flex-center nav-first shop-nav active line1rem" >
 					<a href="###"><div>Shop</div></a>
