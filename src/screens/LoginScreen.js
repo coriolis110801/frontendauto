@@ -137,8 +137,8 @@ function LoginScreen({ location, history }) {
 							<div className="place">
 								To save your details for future purchases, please sign up to AutoSqueak and create your account.
 							</div>
-							<div className="register" style={{marginTop: '0.6rem'}}>
-							<Link to='/selAddress' className="register">Continue as a Guest</Link>
+							<div className="registerBtn" style={{marginTop: '0.6rem'}}>
+							<Link to='/selAddress' >Continue as a Guest</Link>
 							</div>
 						</div>
 						}

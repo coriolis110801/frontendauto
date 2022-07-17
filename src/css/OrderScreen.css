@@ -502,7 +502,7 @@ li {
 		font-size: 0.4rem !important;
 		margin: 0.4rem 0;
 	}
-	.name{
+	.OrderScreen .name{
 		margin: 0.5rem 0;
 	}
 	.welcome{
@@ -545,7 +545,7 @@ li {
 		font-size: 0.16rem;
 		line-height: 0.3rem;
 	}
-	.title,.name{
+	.title,.OrderScreen .name{
 		font-size: 0.28rem;
 	}
 	.topName{

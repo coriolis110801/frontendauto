@@ -27,7 +27,7 @@ function Header(props) {
 			<a href="/"><div className="logo"></div></a>
 			<div className="flex-center shop nav">
 				<div className="flex-center nav-first shop-nav active line1rem" >
-					<a href="###"><div>Shop</div></a>
+					<a href="#"><div>Shop</div></a>
 					<img src="./images/index/up1.png" className="down" />
 					<img src="./images/index/UP.png" className="down-y" />
 					<div className="imgUl">
@@ -170,7 +170,6 @@ function Header(props) {
 				</Link>
 				<Link to="/about">About</Link>
 				<Link to="/contact">Contact</Link>
-				<Link to="/login">Login / Register</Link>
 				{userInfo&&userInfo.token?
 					<Link to="/account">My Account</Link>:''}
 				{userInfo&&userInfo.token?

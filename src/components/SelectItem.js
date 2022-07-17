@@ -28,7 +28,7 @@ function SelectItem({item, noFun}) {
         }
     }
     return (
-        <div class="f-loading">
+        <div className="f-loading">
             <div className="SelectItem">
                 {
                     loading ? <div className="fullcreen"><LoadSpinner /></div>: <div>

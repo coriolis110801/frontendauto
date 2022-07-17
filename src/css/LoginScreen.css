@@ -39,7 +39,7 @@
     font-size: 0.14rem;
     margin: 0.2rem 0;
 }
-.login .register {
+.login .registerBtn {
     background-color: rgb(67,117,123);
     color: #fff;
     text-align: center;
@@ -117,8 +117,9 @@
 	.login .secction{
 		flex-direction: column;
 	}
-	.login .left{
+	.login .left, .login .right{
 		width: 90%;
+		margin: 0 auto;
 	}
 	.login .botm{
 		margin-bottom: 0.6rem;
@@ -140,6 +141,7 @@
 	}
 	.login .name{
 		font-size: 0.7rem;
+		line-height: 0.7rem;
 	}
 	.login .cont{
 		font-size: 0.4rem;
@@ -152,7 +154,7 @@
 		padding-bottom: 0.2rem;
 		width: 100%;
 	}
-	.login .loginBtn{
+	.login .loginBtn, .login .registerBtn{
 		font-size: 0.3rem;
 		font-weight: 600;
 		padding: 0.24rem 0;
@@ -168,9 +170,6 @@
 	.login .two{
 		flex-direction: column;
 		flex: 1;
-	}
-	.login .right{
-		margin-left: 0;
 	}
 	.login .uil input{
 		font-size: 0.2rem;

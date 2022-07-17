@@ -173,7 +173,7 @@ function AddressScreen({ history }) {
 											<div className="mar">●</div>
 											<div>{item.phone}</div>
 										</div>
-										<div class="boxName names">{item.gs}</div>
+										<div className="boxName names">{item.gs}</div>
 
 										<div className="select_item">
 											<div >{item.country}</div>

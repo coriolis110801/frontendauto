@@ -8,6 +8,7 @@ import SwiperCore, { Navigation, Autoplay } from 'swiper';
 import { useDispatch, useSelector } from 'react-redux'
 import { listProductDetails } from '../actions/productActions'
 import { Link } from 'react-router-dom'
+import { listProducts } from '../actions/productActions'
 import '../css/ProductScreen.css'
 SwiperCore.use([ Navigation]);
 function ProductScreen({ match }) {
@@ -19,10 +20,13 @@ function ProductScreen({ match }) {
     const dispatch = useDispatch()
     const productDetails = useSelector(state => state.productDetails)
     const { error, loading, product } = productDetails
+    const productList = useSelector(state => state.productList)
+    const { loading2, products } = productList
     const [slidesPerView,setSlidesPerView] = useState(4)
     useEffect(() => {
 
         dispatch(listProductDetails(productId))
+        if(!products || products.length==0)dispatch(listProducts(''))
         resize()
         window.onresize = resize
     }, [dispatch, productId])
@@ -48,7 +52,7 @@ function ProductScreen({ match }) {
     }
     return (
         <div className="product">
-            {loading ? <div className="fullcreen"><LoadSpinner /></div>
+            {loading || loading2 ? <div className="fullcreen"><LoadSpinner /></div>
                 : error ? <Message variant='danger'>{error}</Message>
                     :
                     <div>
@@ -154,7 +158,7 @@ function ProductScreen({ match }) {
                                             product&&product.info?
                                             <div className="flex-center goods-price">
                                                 <div className="del-price">£{product.info.price}</div>
-                                                <div className="now-price">£{product.info.price * product.info.discount}</div>
+                                                <div className="now-price">£{(product.info.price * product.info.discount).toFixed(2)}</div>
                                             </div>
                                             :''
                                         }
@@ -193,16 +197,16 @@ function ProductScreen({ match }) {
                                     >
 
                                         {
-                                            product&&product.products&&product.products.map((item,index) => {
+                                            products&&products.map((item,index) => {
                                                 return  <SwiperSlide><div  style={{marginLeft: '15%'}}>
-                                                            <div class="swiperImg">
+                                                            <div className="swiperImg">
                                                                 <img src={item.image} />
                                                             </div>
-                                                            <div class="swiper-price">£{item.discount===1?item.price:(item.price*item.discount)}</div>
-                                                            <div class="swiper-btn-wrap flex-center">
+                                                            <div className="swiper-price">£{item.discount===1?item.price:((item.price*item.discount).toFixed(2))}</div>
+                                                            <div className="swiper-btn-wrap flex-center">
                                                                 <Link onClick={handleLink(item.id)} to={'/product/'+item.id} className="btnLeft flex">View Details</Link>
-                                                                <div class="flex btnRight">
-                                                                    <img src="./images/index/box2.png" class="btnImg" />
+                                                                <div className="flex btnRight">
+                                                                    <img src="./images/index/box2.png" className="btnImg" />
                                                                     <div>+</div>
                                                                 </div>
                                                             </div>

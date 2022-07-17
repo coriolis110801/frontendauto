@@ -7,9 +7,9 @@ function PrivatepolicyScreen() {
 
     return (
         <div className="PrivatepolicyScreen Describe">
-            <div class="maxWidth">
-                <div class="topTitle">Privacy Policy</div>
-                <div class="topCont">
+            <div className="maxWidth">
+                <div className="topTitle">Privacy Policy</div>
+                <div className="topCont">
                     <p>This notice outlines our general policy on Privacy and Fair Processing.</p>
                     <p>For more information about the legal terms and conditions that may apply to your use of our websites please refer to our:</p>
                     <ul>
@@ -82,9 +82,9 @@ function PrivatepolicyScreen() {
                 </div>
             </div>
             <div style={{'background-color':' rgb(135, 200, 210)'}}>
-                <div class="maxWidth flex secctBtn">
-                    <div class="title">Check Out Our Products</div>
-                    <div class="btns"><Link to="/">Shop Now</Link></div>
+                <div className="maxWidth flex secctBtn">
+                    <div className="title">Check Out Our Products</div>
+                    <div className="btns"><Link to="/">Shop Now</Link></div>
                 </div>
             </div>
         </div>

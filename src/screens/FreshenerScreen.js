@@ -272,37 +272,37 @@ function FreshenerScreen({ match, history }) {
 		<div className="right FreshenerScreen">
 			{messageInfo.msg && <Message variant={messageInfo.variant}>{messageInfo.msg}</Message>}
 			{designInfo && designInfo.loading && <div className="fullcreen"><LoadSpinner /></div>}
-			<div class="maxWidth" style={{ padding: '0 0.5rem' }}>
-				<div class="title">Design Your Own Air Freshener</div>
-				<div class="flex-between secction">
-					<div class="cont">
+			<div className="maxWidth" style={{ padding: '0 0.5rem' }}>
+				<div className="title">Design Your Own Air Freshener</div>
+				<div className="flex-between secction">
+					<div className="cont">
 						Select from the shapes below to start designing your custom air fre shener, or uploadyour own
 						(PNG or JPG) using a template. There are plenty of scents to pick from: scentone, scent two,
 						scent three, scent four, scent five, scent six, scent seven, scent eight, scentnine and scent
 						ten.
 					</div>
-					<div class="btn">Request a Sample</div>
+					<div className="btn">Request a Sample</div>
 				</div>
 			</div>
 
 			<div style={{ backgroundColor: ' rgb(232,244,244)' }}>
-				<div class="maxWidth" style={{ padding: '0 0.5rem' }}>
-					<div class="content">
-						<div class="left">
-							<div class="left_title">Chosen Shape: {designInfo && designInfo.fresheners && designInfo.fresheners.size}</div>
-							<div class="flex-center lis_title">
+				<div className="maxWidth" style={{ padding: '0 0.5rem' }}>
+					<div className="content">
+						<div className="left">
+							<div className="left_title">Chosen Shape: {designInfo && designInfo.fresheners && designInfo.fresheners.size}</div>
+							<div className="flex-center lis_title">
 								<div>Scent</div>
 								<div>Color</div>
 								<div>Quantity</div>
 								<div>Subtotal</div>
 							</div>
-							<div class="list_content">
+							<div className="list_content">
 								{
 									scents.map((item, index) => {
-										return <div class="flex-between cart-item">
+										return <div className="flex-between cart-item">
 											<div style={{display: 'flex',width:' 100%'}}>
-												<div class="selectLi">
-													<div class="downPutOne flex-between scent-select">
+												<div className="selectLi">
+													<div className="downPutOne flex-between scent-select">
 														<select value={item.scent} onChange={handleChange(index, 'scent')}>
 															{
 																scentList.map((item, i)=>{
@@ -312,9 +312,9 @@ function FreshenerScreen({ match, history }) {
 														</select>
 													</div>
 												</div>
-												<div class="flex-center selectLi">
-													<div class="colorBox" style={{background: colorList[item.color].color}}></div>
-													<div class="downPutOne flex-between color-select">
+												<div className="flex-center selectLi">
+													<div className="colorBox" style={{background: colorList[item.color].color}}></div>
+													<div className="downPutOne flex-between color-select">
 														<select value={item.color} onChange={handleChange(index, 'color')}>
 															{
 																colorList.map((item, i)=>{
@@ -324,57 +324,57 @@ function FreshenerScreen({ match, history }) {
 														</select>
 													</div>
 												</div>
-												<div class="selectLi flex-center" >
-													<input placeholder="" value={item.quantity} min="1" type="number" class="iptQuantity" onChange={handleChange(index, 'quantity')} />
-													{ showTip[index] && <div class="limit-tip">Minimum order quantity is 3pcs</div> }
+												<div className="selectLi flex-center" >
+													<input placeholder="" value={item.quantity} min="1" type="number" className="iptQuantity" onChange={handleChange(index, 'quantity')} />
+													{ showTip[index] && <div className="limit-tip">Minimum order quantity is 3pcs</div> }
 												</div>
-												<div class="selectLi subTotal" style={{color: '#666'}}>£{(getPriceOfNum(item.quantity) * item.quantity).toFixed(2)}</div>
+												<div className="selectLi subTotal" style={{color: '#666'}}>£{(getPriceOfNum(item.quantity) * item.quantity).toFixed(2)}</div>
 											</div>
-											<div class="deleteBox">
-												<div class="delete" onClick={deleteScent(index)}>delete</div>
+											<div className="deleteBox">
+												<div className="delete" onClick={deleteScent(index)}>delete</div>
 											</div>
 										</div>
 									})
 								}
 							</div>
-											<div class="tips">
+											<div className="tips">
 
 											</div>
 
 
-											<div class="add" onClick={addScent}>Add a Scent</div>
-											<div class="tips">
+											<div className="add" onClick={addScent}>Add a Scent</div>
+											<div className="tips">
 												<div>Minimum Quantity of 3 per line</div>
 												<div>Quantities less than 500 will not be considered in any total quantity raye
 									discounts</div>
 												<div>*Premium string Additional costs may apply.</div>
 											</div>
-											<Link to='/shapes' class="backts">
+											<Link to='/shapes' className="backts">
 											Back to Shapes
 											</Link>
 										</div>
-							<div class="right">
-								<div class="right_title">Product Summary</div>
-								<div class="scent">
-									<div class="flex-between">
+							<div className="right">
+								<div className="right_title">Product Summary</div>
+								<div className="scent">
+									<div className="flex-between">
 										<div>Quantity:</div>
-										<div class="totalQuantity">{totalObj.quantity}</div>
+										<div className="totalQuantity">{totalObj.quantity}</div>
 									</div>
 								</div>
-								<div class="subtotal">
-									<div class="flex-between">
+								<div className="subtotal">
+									<div className="flex-between">
 										<div>Subtotal:</div>
 										<div>£{totalObj.total}</div>
 									</div>
-									<div class="flex-between">
+									<div className="flex-between">
 										<div>Standard Shipping (UK):</div>
 										<div>£{totalObj.total}</div>
 									</div>
 								</div>
 								<div>
-									<div class="flex-center">
-										<div class="selectName">Country</div>
-										<div class="layui-form downPutOne">
+									<div className="flex-center">
+										<div className="selectName">Country</div>
+										<div className="layui-form downPutOne">
 											<select>
 												<option value="volvo">America</option>
 												<option value="saab">Saab</option>
@@ -384,9 +384,9 @@ function FreshenerScreen({ match, history }) {
 										</div>
 
 									</div>
-									<div class="flex-center">
-										<div class="selectName">Delivery</div>
-										<div class="layui-form downPutOne">
+									<div className="flex-center">
+										<div className="selectName">Delivery</div>
+										<div className="layui-form downPutOne">
 											<select >
 												<option value="volvo">America</option>
 												<option value="saab">Saab</option>
@@ -396,15 +396,15 @@ function FreshenerScreen({ match, history }) {
 										</div>
 
 									</div>
-									<div class="flex-between" style={{ marginTop: '0.2rem' }}>
+									<div className="flex-between" style={{ marginTop: '0.2rem' }}>
 										<div>
-											<div class="total" style={{ fontWeight: 600 }}>Total:</div>
-											<div class="vat">Including £00.00 in VAT</div>
+											<div className="total" style={{ fontWeight: 600 }}>Total:</div>
+											<div className="vat">Including £00.00 in VAT</div>
 										</div>
-										<div class="money total-price">£00.00</div>
+										<div className="money total-price">£00.00</div>
 									</div>
 								</div>
-								<div class="save sDesign2" onClick={startDesign}>Start Design 2</div>
+								<div className="save sDesign2" onClick={startDesign}>Start Design 2</div>
 							</div>
 						</div>
 					</div>

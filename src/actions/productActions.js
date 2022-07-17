@@ -33,10 +33,10 @@ import {
 
 } from '../constants/productConstants'
 import { baseAPIUrl } from '../constants/apiConstants'
-export const listProducts = (keyword = '', flag, id='') => async (dispatch) => {
+export const listProducts = (keyword = '', flag) => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_LIST_REQUEST })
-        let url = baseAPIUrl + 'product/store?id='+id;
+        let url = baseAPIUrl + 'product/store';
         
         if(keyword) url = baseAPIUrl + 'product/search?keyword='+keyword;
         if(!flag) url = baseAPIUrl + 'homepage';

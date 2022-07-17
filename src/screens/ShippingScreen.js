@@ -95,24 +95,24 @@ function ShippingScreen({ history, match }) {
                 <span className={tab >= 2 ? 'active' : ''}>Place Order</span>
             </div>
             {
-                tab == 1 ? (<form class="">
-                    <div class="form-group">
-                        <legend class="form-label">Select Method</legend>
-                        <div class="col">
-                            <div class="form-check">
-                                <input name="paymentMethod" type="radio" id="paypal" class="form-check-input" checked />
-                                <label title="" for="paypal" class="form-check-label">PayPal or Credit Card</label>
+                tab == 1 ? (<form >
+                    <div className="form-group">
+                        <legend className="form-label">Select Method</legend>
+                        <div className="col">
+                            <div className="form-check">
+                                <input name="paymentMethod" type="radio" id="paypal" className="form-check-input" checked />
+                                <label title="" for="paypal" className="form-check-label">PayPal or Credit Card</label>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn TextGreenBtn" onClick={next}>Continue</button>
+                    <button type="submit" className="btn TextGreenBtn" onClick={next}>Continue</button>
                 </form>) : ''
             }
             {
-                tab == 2 ? <div class="row PayOrder">
-                    <div class="col-md-8">
-                        <div class="list-group list-group-flush">
-                            <div class="list-group-item">
+                tab == 2 ? <div className="row PayOrder">
+                    <div className="col-md-8">
+                        <div className="list-group list-group-flush">
+                            <div className="list-group-item">
                                 <h2>Shipping</h2>
                                 {
                                     cart.address_id === 'zitiquhuo' ? 
@@ -129,23 +129,23 @@ function ShippingScreen({ history, match }) {
                                 }
                                 
                             </div>
-                            <div class="list-group-item">
+                            <div className="list-group-item">
                                 <h2>Payment Method</h2>
                                 <p><strong>Method: </strong>PayPal</p>
                             </div>
-                            <div class="list-group-item">
+                            <div className="list-group-item">
                                 <h2>Order Items</h2>
-                                <div class="list-group list-group-flush">
+                                <div className="list-group list-group-flush">
                                     {
                                         cart.itemsList.map((item, index) => {
-                                            return <div class="list-group-item">
-                                                        <div class="row"><div class="col-md-1">
-                                                            <img src={item.image} alt={item.name} class="img-fluid rounded" />
+                                            return <div className="list-group-item">
+                                                        <div className="row"><div className="col-md-1">
+                                                            <img src={item.image} alt={item.name} className="img-fluid rounded" />
                                                         </div>
-                                                            <div class="col">
+                                                            <div className="col">
                                                                 <a href={"#/product/"+item.id}>{item.name}</a>
                                                             </div>
-                                                            <div class="col-md-4">{item.qty} X £{item.price} = £{item.qty * item.price}</div>
+                                                            <div className="col-md-4">{item.qty} X £{item.price} = £{item.qty * item.price}</div>
                                                         </div>
                                                     </div>
                                         })
@@ -154,38 +154,38 @@ function ShippingScreen({ history, match }) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4" style={{padding: '0 .15rem'}}>
-                        <div class="card">
-                            <div class="list-group list-group-flush">
-                                <div class="list-group-item">
+                    <div className="col-md-4" style={{padding: '0 .15rem'}}>
+                        <div className="card">
+                            <div className="list-group list-group-flush">
+                                <div className="list-group-item">
                                     <h2>Order Summary</h2>
                                 </div>
-                                <div class="list-group-item">
-                                    <div class="row"><div class="col">Items:</div>
-                                <div class="col">£{cart.itemsPrice}</div>
+                                <div className="list-group-item">
+                                    <div className="row"><div className="col">Items:</div>
+                                <div className="col">£{cart.itemsPrice}</div>
                                     </div>
                                 </div>
-                                <div class="list-group-item">
-                                    <div class="row">
-                                        <div class="col">Shipping:</div>
-                                        <div class="col">£{cart.yunfei}</div>
+                                <div className="list-group-item">
+                                    <div className="row">
+                                        <div className="col">Shipping:</div>
+                                        <div className="col">£{cart.yunfei}</div>
                                     </div>
                                 </div>
-                                <div class="list-group-item">
-                                    <div class="row">
-                                        <div class="col">Tax:</div>
-                                        <div class="col">£{cart.Shui}</div>
+                                <div className="list-group-item">
+                                    <div className="row">
+                                        <div className="col">Tax:</div>
+                                        <div className="col">£{cart.Shui}</div>
                                     </div>
                                 </div>
-                                <div class="list-group-item">
-                                    <div class="row">
-                                        <div class="col">Total:</div>
-                                        <div class="col">£{cart.totalPrice}</div>
+                                <div className="list-group-item">
+                                    <div className="row">
+                                        <div className="col">Total:</div>
+                                        <div className="col">£{cart.totalPrice}</div>
                                     </div>
                                 </div>
-                                <div class="list-group-item"></div>
-                                <div class="list-group-item">
-                                    <button type="button" onClick={placeOrder} class="btn TextGreenBtn PayBtn">Place Order</button>
+                                <div className="list-group-item"></div>
+                                <div className="list-group-item">
+                                    <button type="button" onClick={placeOrder} className="btn TextGreenBtn PayBtn">Place Order</button>
                                 </div>
                             </div>
                         </div>

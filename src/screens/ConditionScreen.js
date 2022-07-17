@@ -8,9 +8,9 @@ function ConditionScreen() {
 
     return (
         <div className="ConditionScreen Describe">
-            <div class="maxWidth">
-                <div class="topTitle">Terms &amp; Conditions</div>
-                <div class="topCont">
+            <div className="maxWidth">
+                <div className="topTitle">Terms &amp; Conditions</div>
+                <div className="topCont">
                     <p>Standard terms and conditions for your purchases of goods and services.</p>
                     <h2><strong>General</strong></h2>
                     <ol>
@@ -117,9 +117,9 @@ function ConditionScreen() {
                 </div>
             </div>
             <div style={{ 'background-color': ' rgb(135, 200, 210)' }}>
-                <div class="maxWidth flex secctBtn">
-                    <div class="title">Check Out Our Products</div>
-                    <div class="btns"><Link to="/">Shop Now</Link></div>
+                <div className="maxWidth flex secctBtn">
+                    <div className="title">Check Out Our Products</div>
+                    <div className="btns"><Link to="/">Shop Now</Link></div>
                 </div>
             </div>
         </div>

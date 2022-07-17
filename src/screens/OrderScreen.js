@@ -398,7 +398,7 @@ function OrderScreen({ history }) {
 :''
 				}
 			</div>
-			<div class="pageTest"></div>
+			<div className="pageTest"></div>
 			</div> }
 			
 		</div>

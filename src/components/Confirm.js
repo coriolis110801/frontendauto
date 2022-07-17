@@ -2,7 +2,7 @@ import React from 'react'
 function Confirm({tip, okFun, noFun}) {
     // console.log(okFun, 999);
     return (
-        <div class="f-loading">
+        <div className="f-loading">
             <div className="Confirm">
                 <div>{tip}</div>
                 <div  className="flex "><div onClick={okFun} className=" basket-btn">YES</div> 

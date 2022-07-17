@@ -106,19 +106,19 @@ function OrderDetailScreen({ match, history }) {
                                 {
                                     orderDetail && orderDetail.productlist ?
                                         (
-                                            <div class="list-group-item">
+                                            <div className="list-group-item">
                                                 <h2>Order Items</h2>
-                                                <div class="list-group list-group-flush"> productlist
+                                                <div className="list-group list-group-flush"> productlist
                                                     {
                                                         orderDetail.productlist.map((item, index) => {
-                                                            return <div class="list-group-item">
-                                                                <div class="row"><div class="col-md-1">
-                                                                    <img style={{width: '100%', height: '100%'}} src={item.product.image} alt={item.product.name} class="img-fluid rounded" />
+                                                            return <div className="list-group-item">
+                                                                <div className="row"><div className="col-md-1">
+                                                                    <img style={{width: '100%', height: '100%'}} src={item.product.image} alt={item.product.name} className="img-fluid rounded" />
                                                                 </div>
-                                                                    <div class="col">
+                                                                    <div className="col">
                                                                         <a  href={"#/product/" + item.product.id}>{item.product.name}</a>
                                                                     </div>
-                                                                    <div class="col-md-4">
+                                                                    <div className="col-md-4">
                                                                         <div>{item.product.quantity} X £{item.product.price} = £{item.product.qty * item.product.price}</div>
                                                                     </div>
                                                                 </div>

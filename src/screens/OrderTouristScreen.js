@@ -140,19 +140,19 @@ function OrderTouristScreen({ match, history }) {
                                 {
                                     cartCopy && cartCopy.itemsList && cartCopy.itemsList.length>0?
                                         (
-                                            <div class="list-group-item">
+                                            <div className="list-group-item">
                                                 <h2>Order Items</h2>
-                                                <div class="list-group list-group-flush">
+                                                <div className="list-group list-group-flush">
                                                     {
                                                         cartCopy.itemsList.map((item, index) => {
-                                                            return <div class="list-group-item">
-                                                                <div class="row"><div class="col-md-1">
-                                                                    <img style={{width: '100%', height: '100%'}} src={item.image} alt={item.name} class="img-fluid rounded" />
+                                                            return <div className="list-group-item">
+                                                                <div className="row"><div className="col-md-1">
+                                                                    <img style={{width: '100%', height: '100%'}} src={item.image} alt={item.name} className="img-fluid rounded" />
                                                                 </div>
-                                                                    <div class="col">
+                                                                    <div className="col">
                                                                         <a  href={"#/product/" + item.id}>{item.name}</a>
                                                                     </div>
-                                                                    <div class="col-md-4">
+                                                                    <div className="col-md-4">
                                                                         <div>{item.qty} X £{item.price} = £{item.qty * item.price}</div>
                                                                     </div>
                                                                 </div>

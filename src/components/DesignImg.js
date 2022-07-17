@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 function DesignImg({children, noFun, okFun}) {
 
     return (
-        <div class="f-loading" >
+        <div className="f-loading" >
             <div style={{position: 'relative',background: '#fff',width: '800px','box-shadow':' 0 5px 15px rgb(0 0 0 / 50%)'}}>
                 <img onClick={noFun} style={{position: 'absolute', right: '10px', top: '10px', cursor: 'pointer'}} width="30" src="./images/index/errs.png" />  
                 <div style={{marginTop: 40}}>{children}  </div>                
