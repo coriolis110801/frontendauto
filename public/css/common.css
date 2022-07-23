@@ -194,25 +194,47 @@ input[type="radio"]:checked:after {
 	z-index: 8;
 	display: none;
 }
+.Confirm {
+	text-align: left;
+	color: #0C0C0C;
+	font: 14px Helvetica Neue,Helvetica,PingFang SC,Tahoma,Arial,sans-ser;
+}
 .Confirm , .SelectItem{
 	width: 90%;
 	max-width: 400px;
-	padding: .5rem 0.1rem;
 	background: white;
 	border: 1px solid rgb(67,117,123);
 	box-sizing: border-box;
+}
+.SelectItem,.confirm-content {
+	padding: .3rem 0.1rem;
 }
 .Confirm .no, .SelectItem .no {
 	background: none;
 	color: rgb(67,117,123);
 	border: 1px solid rgb(67,117,123);
 	margin-left: .1rem;
-	
-	
 }
 .Confirm .basket-btn, .SelectItem .basket-btn{
-	margin-top: .5rem;
 	padding: .05rem .1rem;
+}
+.SelectItem .basket-btn {
+	margin-top: .5rem;
+}
+.Confirm .title {
+    padding: 0 .4rem 0 .1rem;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #F0F0F0;
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+	border-radius: 2px 2px 0 0;
+
+}
+.Confirm .flex {
+	justify-content: flex-end;
+	padding: 0 .1rem;
 }
 .SelectItem .basket-btn {
 	padding: .05rem .1rem;

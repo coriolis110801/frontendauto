@@ -263,3 +263,50 @@ export const createProductReview = (productId, review) => async (dispatch, getSt
         })
     }
 }
+
+export const queryProductTotal = (pk, color, combo, product) => async (dispatch, getState) => {
+    try {
+        if(!pk || !color || !combo) return;
+        dispatch({
+            type: PRODUCT_UPDATE_REQUEST
+        })
+
+        const {
+            userLogin: { userInfo },
+        } = getState()
+
+        const config = {
+            headers: {
+                'Content-type': 'application/json'
+            }
+        }
+        
+        const { data } = await axios.post(
+            `/queryproducttotal`,
+            {
+                pk,
+                color,combo
+            },
+            config
+        )
+        product = {...product, ...data}
+        console.log(product,9999)
+        dispatch({
+            type: PRODUCT_UPDATE_SUCCESS,
+            payload: product,
+        })
+        dispatch({
+            type: PRODUCT_DETAILS_SUCCESS,
+            payload: product
+        })
+
+
+    } catch (error) {
+        dispatch({
+            type: PRODUCT_UPDATE_FAIL,
+            payload: error.response && error.response.data.detail
+                ? error.response.data.detail
+                : error.message,
+        })
+    }
+}

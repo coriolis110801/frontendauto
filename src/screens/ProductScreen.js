@@ -6,17 +6,21 @@ import { Swiper, SwiperSlide } from 'swiper/react/swiper-react'
 import SwiperCore, { Navigation, Autoplay } from 'swiper';
 
 import { useDispatch, useSelector } from 'react-redux'
-import { listProductDetails } from '../actions/productActions'
+import { listProductDetails,queryProductTotal } from '../actions/productActions'
 import { Link } from 'react-router-dom'
 import { listProducts } from '../actions/productActions'
+import { addToCart } from '../actions/cartActions'
+import Confirm from '../components/Confirm'
 import '../css/ProductScreen.css'
 SwiperCore.use([ Navigation]);
 function ProductScreen({ match }) {
     // image
     const [image, setImage] = useState('')
     const [productId, setProductId] = useState(match.params.id)
-    
-   
+    const [qty, setQty] = useState(1);
+    const [color, setColor] = useState('');
+    const [combo, setCombo] = useState('');
+    const [tip, setTip] = useState('');
     const dispatch = useDispatch()
     const productDetails = useSelector(state => state.productDetails)
     const { error, loading, product } = productDetails
@@ -50,8 +54,31 @@ function ProductScreen({ match }) {
             setProductId(productId);
         }
     }
+    const addCart = ()=>{
+        if(!color) {
+            //please choose type
+            setTip('please choose type');
+            return;
+        }
+        if(!combo) {
+            setTip('please choose combo');
+            return;
+        }
+        dispatch(addToCart(product, qty, color, combo));
+    }
+    const changeIptHandle = (key) => {
+        return (e) => {
+            dispatch(queryProductTotal(productId, color, combo, product))
+            if(key == 'color') {
+                setColor(e.target.value);
+            }else if(key == 'combo') {
+                setCombo(e.target.value);
+            }
+        }
+    }
     return (
         <div className="product">
+            {tip&&<Confirm okFun={()=>setTip('')}   tip={tip} confirmText="OK" />}
             {loading || loading2 ? <div className="fullcreen"><LoadSpinner /></div>
                 : error ? <Message variant='danger'>{error}</Message>
                     :
@@ -122,7 +149,7 @@ function ProductScreen({ match }) {
 							                </div>
                                         </div>
                                         <div className="layui-form lis">
-                                            <select className="downPutOne lis">
+                                            <select className="downPutOne lis" value={color} onChange={changeIptHandle('color')}>
                                                 <option value="">Please Choose</option>
                                                 {
                                                     product&&product.colors&&product.colors.map((item,index) => {
@@ -133,7 +160,7 @@ function ProductScreen({ match }) {
 
                                         </div>
                                         <div className="layui-form lis">
-                                            <select className="downPutOne lis">
+                                            <select className="downPutOne lis"  value={combo} onChange={changeIptHandle('combo')}>
                                                 <option value="">Please Choose</option>
                                                 {
                                                     product&&product.combos&&product.combos.map((item,index) => {
@@ -145,33 +172,36 @@ function ProductScreen({ match }) {
                                         </div>
                                         <div className="quantity-input flex-center">
                                             <div className="quantity-label">Quantity:</div>
-                                            <div className="quantity-btn">-</div>
-                                            <input type="text" value="1" />
-                                            <div className="quantity-btn">+</div>
+                                            <div className="quantity-btn" onClick={()=>setQty(qty-1>0?(qty-1) : 1)}>-</div>
+                                            <input type="text" onChange={(e)=>setQty(e.target.value*1 || 1)} value={qty} />
+                                            <div className="quantity-btn" onClick={()=>setQty((qty+1)>product.ftotal ? product.ftotal : (qty+1))}>+</div>
                                         </div>
-
-                                        <div className="stock-mb notInStock">
-                                            <img src="./img/index/cha.png" />
-                                            <div>Not in stock</div>
-                                        </div>
+                                        {
+                                            product.ftotal > 0 ? <div className="stock-pc inStock">
+                                                <img src="./images/index/gou.png" />
+                                                <div>In stock</div>
+                                            </div>:<div className="stock-mb notInStock">
+                                                <img src="./images/index/cha.png" />
+                                                <div>Not in stock</div>
+                                            </div> 
+                                        }
+                                        
                                         {
                                             product&&product.info?
                                             <div className="flex-center goods-price">
-                                                <div className="del-price">£{product.info.price}</div>
+                                                {
+                                                    product.info.discount==1?'':<div className="del-price">£{product.info.price}</div>
+                                                }
+                                                
                                                 <div className="now-price">£{(product.info.price * product.info.discount).toFixed(2)}</div>
                                             </div>
                                             :''
                                         }
                                         
-                                        <a href="###">
-                                            <div className="add-basket-btn">
-                                                                Add to Basket
-                                            </div>
-                                        </a>
-                                        <div className="stock-pc inStock">
-                                            <img src="./images/index/gou.png" />
-                                            <div>In stock</div>
+                                        <div className="add-basket-btn" onClick={addCart}>
+                                                            Add to Basket
                                         </div>
+                                    
 
                                     </div>
                                 </div>
