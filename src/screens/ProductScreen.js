@@ -64,7 +64,7 @@ function ProductScreen({ match }) {
             setTip('please choose combo');
             return;
         }
-        dispatch(addToCart(product, qty, color, combo));
+        dispatch(addToCart(product.info, qty, color, combo));
     }
     const changeIptHandle = (key) => {
         return (e) => {
