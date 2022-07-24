@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { logout } from '../actions/userActions'
-import {getCart} from '../actions/cartActions'
+import {CART_CLEAR_ITEMS} from '../constants/cartConstants'
 function Header(props) {
 
 	const userLogin = useSelector(state => state.userLogin)
@@ -12,13 +12,10 @@ function Header(props) {
     const dispatch = useDispatch()
 
     const logoutHandler = (e) => {
-		e.preventDefault();
-        dispatch(logout())
+		dispatch({ type: CART_CLEAR_ITEMS })
+		dispatch(logout())
 	}
-	useEffect(()=> {
-		console.log(cartItems,'cart.cartItems.cartItems');
-		// dispatch(getCart());
-	},[]);
+
     return (
         <header>
            <div className="head">Free UK Delivery - Orders over £100</div>
@@ -113,7 +110,7 @@ function Header(props) {
 				
 				{userInfo&&userInfo.token?<Link to="/account"><div className="lorR nav-item">My Account</div></Link>:''}
 				{userInfo&&userInfo.token?
-					<a onClick={logoutHandler}><div className="lorR nav-item">Log Out</div></a>:
+					<Link to="/login" onClick={logoutHandler}><div className="lorR nav-item">Log Out</div></Link>:
 					<Link to="/login"><div className="lorR nav-item">Login/Register</div></Link>}
 				<div className="flex-center" >
 					<img src="./images/index/search.png" className="search" />

@@ -264,33 +264,20 @@ export const createProductReview = (productId, review) => async (dispatch, getSt
     }
 }
 
-export const queryProductTotal = (pk, color, combo, product) => async (dispatch, getState) => {
+export const queryProductTotal = ( color, combo, product) => async (dispatch, getState) => {
     try {
-        if(!pk || !color || !combo) return;
-        dispatch({
-            type: PRODUCT_UPDATE_REQUEST
+        if(!color || !combo) return;
+    
+        const {data} = JSON.parse(product.pinfojson)
+        const obj = data.find(item=>{
+            return item.color === color && item.combo === combo
         })
-
-        const {
-            userLogin: { userInfo },
-        } = getState()
-
-        const config = {
-            headers: {
-                'Content-type': 'application/json'
-            }
+        if(obj ) {
+            product.ftotal = obj.total
+            product.fcolor = color
+            product.fcombo = combo
+            product.info.price = obj.price
         }
-        
-        const { data } = await axios.post(
-            `/queryproducttotal`,
-            {
-                pk,
-                color,combo
-            },
-            config
-        )
-        product = {...product, ...data}
-        console.log(product,9999)
         dispatch({
             type: PRODUCT_UPDATE_SUCCESS,
             payload: product,
@@ -302,11 +289,5 @@ export const queryProductTotal = (pk, color, combo, product) => async (dispatch,
 
 
     } catch (error) {
-        dispatch({
-            type: PRODUCT_UPDATE_FAIL,
-            payload: error.response && error.response.data.detail
-                ? error.response.data.detail
-                : error.message,
-        })
     }
 }

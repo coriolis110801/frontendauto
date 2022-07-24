@@ -1,8 +1,9 @@
 import React,{useEffect, useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { listProductDetails } from '../actions/productActions'
+import { listProductDetails, queryProductTotal } from '../actions/productActions'
 import { addToCart } from '../actions/cartActions'
 import LoadSpinner from './LoadSpinner'
+import Confirm from './Confirm'
 function SelectItem({item, noFun}) {
     const dispatch = useDispatch()
     const productDetails = useSelector(state => state.productDetails)
@@ -10,12 +11,34 @@ function SelectItem({item, noFun}) {
     const [color, setColor] = useState('');
     const [combo, setCombo] = useState('');
     const [qty, setQty] = useState(1);
-    console.log(product.colors,'product');
+    const [tip, setTip] = useState('');
     useEffect(() => {
         if(item &&item.id) dispatch(listProductDetails(item.id));
     }, [dispatch, item]);
     const okFun = ()=>{
-        dispatch(addToCart(item, qty, color, combo));
+        if(!color) {
+            setTip('please choose type');
+            return;
+        }
+        if(!combo) {
+            setTip('please choose combo');
+            return;
+        }
+        
+        const {data} = JSON.parse(item.pinfojson)
+        const obj = data.find(item=>{
+            return item.color === color && item.combo === combo
+        })
+        let item2 = {...item}
+        console.log(obj,888,item)
+        if(obj ) {
+            item2.total = obj.total
+            item2.color = color
+            item2.combo = combo
+            item2.price = obj.price
+        }
+        
+        dispatch(addToCart(item2, qty, color, combo));
         noFun();
     }
     const changeIptHandle = (key) => {
@@ -29,6 +52,7 @@ function SelectItem({item, noFun}) {
     }
     return (
         <div className="f-loading">
+            {tip&&<Confirm okFun={()=>setTip('')}   tip={tip} confirmText="OK" />}
             <div className="SelectItem">
                 {
                     loading ? <div className="fullcreen"><LoadSpinner /></div>: <div>

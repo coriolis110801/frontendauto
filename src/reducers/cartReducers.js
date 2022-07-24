@@ -31,11 +31,12 @@ export const cartReducer = (state = { cartItems: 0, itemsList: [], shippingAddre
             const item = action.payload
             const existItem = state.itemsList? state.itemsList.find(x => x.product === item.product && item.color===x.color && item.combo===x.combo) : null
             if (existItem) {
-                item.qty = existItem.qty * 1 + 1;
+                let qty = item.qty
+                item.qty = existItem.qty * 1 + (item.qty  || 1);
                 return {
                     ...state,
-                    cartItems: (state.cartItems*1 || 0) + 1,
-                    totalPrice: (state.totalPrice || 0) + item.price * (item.discount||1) * item.qty,
+                    cartItems: (state.cartItems*1 || 0) + (qty  || 1),
+                    totalPrice: ((state.totalPrice*1 || 0) + item.price * (item.discount||1) * qty).toFixed(2),
                     itemsList: state.itemsList.map(x =>
                         x.product === item.product && item.color===x.color && item.combo===x.combo ? item : x)
                 }
@@ -44,7 +45,7 @@ export const cartReducer = (state = { cartItems: 0, itemsList: [], shippingAddre
                 return {
                     ...state,
                     cartItems: (state.cartItems*1 || 0) + 1,
-                    totalPrice: (state.totalPrice || 0) + item.price * (item.discount||1) * item.qty,
+                    totalPrice: ((state.totalPrice*1 || 0) + item.price * (item.discount||1) * item.qty).toFixed(2),
                     itemsList: [...(state.itemsList || []), item]
                 }
             }
@@ -54,7 +55,7 @@ export const cartReducer = (state = { cartItems: 0, itemsList: [], shippingAddre
             let obj2 = {
                 ...state,
                 cartItems: (state.cartItems*1 || 0) - item2.qty,
-                totalPrice: (state.totalPrice || 0) - item2.price * item2.qty,
+                totalPrice: (state.totalPrice || 0) - ((item2.price * (item2.discount || 1)) * item2.qty).toFixed(2),
                 itemsList: state.itemsList.filter((x, index) => index !== action.payload)
             };
             localStorage.setItem('cartItems', JSON.stringify(obj2))

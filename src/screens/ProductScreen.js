@@ -68,11 +68,13 @@ function ProductScreen({ match }) {
     }
     const changeIptHandle = (key) => {
         return (e) => {
-            dispatch(queryProductTotal(productId, color, combo, product))
+            
             if(key == 'color') {
                 setColor(e.target.value);
+                dispatch(queryProductTotal( e.target.value, combo, product))
             }else if(key == 'combo') {
                 setCombo(e.target.value);
+                dispatch(queryProductTotal( color, e.target.value, product))
             }
         }
     }

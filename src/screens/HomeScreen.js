@@ -123,15 +123,6 @@ function HomeScreen({ history }) {
 
 
                                         >
-
-                                            {/* {
-                                                products1 && products1.map((item, index) => {
-                                                    return <SwiperSlide><div className="swiperImg">
-                                                        <img src={item.image} />
-                                                        <div className="name flex">{item.name}</div>
-                                                    </div></SwiperSlide>
-                                                })
-                                            } */}
                                             <SwiperSlide className="carui_box">
                                                 <div className="swiperImg">
                                                     <img src="./images/index/carui1.png" className="carUi" />

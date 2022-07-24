@@ -21,7 +21,7 @@ function ShippingScreen({ history, match }) {
     const { shippingAddress } = cart
     // console.log(cart,99991123)
     cart.address_id = match.params.id || undefined
-    cart.itemsPrice = cart.itemsList.reduce((acc, item) => acc + item.price * item.qty, 0).toFixed(2)
+    cart.itemsPrice = cart.itemsList.reduce((acc, item) => acc + (item.price * (item.discount || 1)) * item.qty, 0).toFixed(2)
     // cart.yunfei = (cart.itemsPrice > 10 ? 0 : 1.5).toFixed(2)
     cart.yunfei = 0;
     cart.Shui = Number( cart.itemsPrice - ( cart.itemsPrice / 1.2)).toFixed(2)
@@ -145,7 +145,7 @@ function ShippingScreen({ history, match }) {
                                                             <div className="col">
                                                                 <a href={"#/product/"+item.id}>{item.name}</a>
                                                             </div>
-                                                            <div className="col-md-4">{item.qty} X £{item.price} = £{item.qty * item.price}</div>
+                                                            <div className="col-md-4">{item.qty} X £{(item.price*(item.discount || 1)).toFixed(2)} = £{(item.qty * item.price*(item.discount || 1)).toFixed(2)}</div>
                                                         </div>
                                                     </div>
                                         })

@@ -77,3 +77,13 @@
     height: .6rem;
     font-size: .24rem;
 }
+@media screen and (max-width:1070px) {
+    .ShippingScreen .row.PayOrder {
+        display: block;
+    }
+    .ShippingScreen .row.PayOrder .col-md-8, 
+    .ShippingScreen .row.PayOrder .col-md-4{
+        width: 100%;
+        max-width: 100%;
+    }
+}
