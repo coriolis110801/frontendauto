@@ -118,7 +118,7 @@
 	border-radius: 0.12rem;
 	color: #fff;
 }
-.product .lis{
+.product .black .lis{
 	width: 40%;
 	margin-top: 0.15rem;
 	font-size: 0.14rem;
@@ -127,7 +127,7 @@
 	padding-bottom: 0.1rem;
 	cursor: pointer;
 }
-.product .lis select{
+.product .black .lis select{
     width: 100%;
     height: 100%;
     border: none;

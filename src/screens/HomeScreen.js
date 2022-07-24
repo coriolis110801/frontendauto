@@ -124,53 +124,60 @@ function HomeScreen({ history }) {
 
                                         >
                                             <SwiperSlide className="carui_box">
-                                                <div className="swiperImg">
+                                                <Link to="/store/3" className="swiperImg">
                                                     <img src="./images/index/carui1.png" className="carUi" />
                                                     <div className="name flex">Chemical Products</div>
-                                                </div>
+                                                </Link>
                                             </SwiperSlide>
                                             <SwiperSlide className="carui_box">
-                                                <div className="swiperImg">
+                                                <Link to="/store/4" className="swiperImg">
                                                     <img src="./images/index/carui2.png" className="carUi" />
                                                     <div className="name flex">Air Fresheners</div>
-                                                </div>
+                                                </Link>
                                             </SwiperSlide>
                                             <SwiperSlide className="carui_box">
-                                                <div className="swiperImg">
+                                                <Link to="/store/6" className="swiperImg">
                                                     <img src="./images/index/carui3.png" className="carUi" />
                                                     <div className="name flex">H.P. Pump and Parts</div>
-                                                </div>
+                                                </Link>
                                             </SwiperSlide>
                                             <SwiperSlide className="carui_box">
-                                                <div className="swiperImg">
+                                                <Link to="/store/7" className="swiperImg">
                                                     <img src="./images/index/carui4.png" className="carUi" />
                                                     <div className="name flex">Vacuum Cleaners</div>
-                                                </div>
+                                                </Link>
                                             </SwiperSlide>
                                             <SwiperSlide className="carui_box">
-                                                <div className="swiperImg">
+                                                <Link to="/store/8" className="swiperImg">
                                                     <img src="./images/index/carui5.png" className="carUi" />
                                                     <div className="name flex">Aerosol Products</div>
-                                                </div>
+                                                </Link>
                                             </SwiperSlide>
                                             <SwiperSlide className="carui_box">
-                                                <div className="swiperImg">
+                                                <Link to="/store/5" className="swiperImg">
                                                     <img src="./images/index/carui6.png" className="carUi" />
                                                     <div className="name flex">Compression Sprayers</div>
-                                                </div>
+                                                </Link>
                                             </SwiperSlide>
                                             <SwiperSlide className="carui_box">
-                                                <div className="swiperImg">
+                                                <Link to="/store/9" className="swiperImg">
                                                     <img src="./images/index/carui7.png" className="carUi" />
                                                     <div className="name flex">Valeting Accessories</div>
-                                                </div>
+                                                </Link>
                                             </SwiperSlide>
                                             <SwiperSlide className="carui_box">
-                                                <div className="swiperImg">
+                                                <Link to="/store/20" className="swiperImg">
                                                     <img src="./images/index/carui8.png" className="carUi" />
                                                     <div className="name flex">Pipe Fixing And Fitting</div>
-                                                </div>
+                                                </Link>
                                             </SwiperSlide>
+                                            <SwiperSlide className="carui_box">
+                                                <Link to="/store/12" className="swiperImg">
+                                                    <img src="./images/index/carui12.png" className="carUi" />
+                                                    <div className="name flex">Microfibre</div>
+                                                </Link>
+                                            </SwiperSlide>
+             
 
 
 

@@ -11,9 +11,10 @@ import { Link } from 'react-router-dom'
 import { listProducts } from '../actions/productActions'
 import { addToCart } from '../actions/cartActions'
 import Confirm from '../components/Confirm'
+import SelectItem from '../components/SelectItem'
 import '../css/ProductScreen.css'
 SwiperCore.use([ Navigation]);
-function ProductScreen({ match }) {
+function ProductScreen({ match, history }) {
     // image
     const [image, setImage] = useState('')
     const [productId, setProductId] = useState(match.params.id)
@@ -27,6 +28,8 @@ function ProductScreen({ match }) {
     const productList = useSelector(state => state.productList)
     const { loading2, products } = productList
     const [slidesPerView,setSlidesPerView] = useState(4)
+    const [nowItem, setNowItem] = useState(null);
+    const [show, setShow] = useState(false);
     useEffect(() => {
 
         dispatch(listProductDetails(productId))
@@ -78,8 +81,22 @@ function ProductScreen({ match }) {
             }
         }
     }
+    const selectAddCart = (item, index) => {
+        return () => {
+            setNowItem(item);
+            setShow(true);
+        }
+    }
+    const noFun = () => {
+        setNowItem({});
+        setShow(false);
+    }
+    const goBack = () => {
+        history.goBack()
+    }
     return (
         <div className="product">
+            {show ? <SelectItem item={nowItem} noFun={noFun} /> : ''}
             {tip&&<Confirm okFun={()=>setTip('')}   tip={tip} confirmText="OK" />}
             {loading || loading2 ? <div className="fullcreen"><LoadSpinner /></div>
                 : error ? <Message variant='danger'>{error}</Message>
@@ -89,12 +106,10 @@ function ProductScreen({ match }) {
                             <div className="mob-title">
                                 <div className="product-name">Product Name Here</div>
                                 <div className="flex-center">
-                                    <a href="###">
-                                        <div className="new-btn">New</div>
+                                    <a style={{cursor: 'pointer'}} onClick={goBack}>
+                                        <div className="new-btn">GO BACK</div>
                                     </a>
-                                    <a href="###">
-                                        <div className="buy-btn">Buy One Get One Free</div>
-                                    </a>
+                                   
                                 </div>
                             </div>
 
@@ -136,12 +151,10 @@ function ProductScreen({ match }) {
                                 <div className="right">
                                     <div className="product-name">Product Name Here</div>
                                     <div className="flex-center">
-                                        <a href="###">
-                                            <div className="new-btn">New</div>
+                                        <a style={{cursor: 'pointer'}} onClick={goBack}>
+                                            <div className="new-btn">GO BACK</div>
                                         </a>
-                                        <a href="###">
-                                            <div className="buy-btn">Buy One Get One Free</div>
-                                        </a>
+                                        
                                     </div>
                                     <div className="black">
                                         <div className="goods-desc">
@@ -192,10 +205,10 @@ function ProductScreen({ match }) {
                                             product&&product.info?
                                             <div className="flex-center goods-price">
                                                 {
-                                                    product.info.discount==1?'':<div className="del-price">£{product.info.price}</div>
+                                                    product.info.discount==1?'':<div className="del-price">£{(product.info.price * qty).toFixed(2)}</div>
                                                 }
                                                 
-                                                <div className="now-price">£{(product.info.price * product.info.discount).toFixed(2)}</div>
+                                                <div className="now-price">£{(product.info.price * product.info.discount * qty).toFixed(2)}</div>
                                             </div>
                                             :''
                                         }
@@ -237,7 +250,7 @@ function ProductScreen({ match }) {
                                                             <div className="swiper-price">£{item.discount===1?item.price:((item.price*item.discount).toFixed(2))}</div>
                                                             <div className="swiper-btn-wrap flex-center">
                                                                 <Link onClick={handleLink(item.id)} to={'/product/'+item.id} className="btnLeft flex">View Details</Link>
-                                                                <div className="flex btnRight">
+                                                                <div className="flex btnRight" onClick={selectAddCart(item)}>
                                                                     <img src="./images/index/box2.png" className="btnImg" />
                                                                     <div>+</div>
                                                                 </div>
